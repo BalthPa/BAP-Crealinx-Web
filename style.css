@@ -1,0 +1,11 @@
+.url-input{
+    width: 20%;
+}
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video{
+    margin: 0 1%;
+}
