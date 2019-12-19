@@ -4,9 +4,7 @@ ul{
 li{
     margin: 0 5%;
 }
-.col-sm-8{
+.test{
     height: 100px;
-}
-.col-sm-4{
-    height: 100px;
+    margin: 10% 0;
 }
