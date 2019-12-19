@@ -33,7 +33,10 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Disabled</a>
+        <a class="nav-link" href="#" >Mon profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" >Ajouter une vidéo</a>
       </li>
     </ul>
 
