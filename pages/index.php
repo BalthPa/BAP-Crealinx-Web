@@ -2,7 +2,7 @@
 
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-8 bg-primary text-center pl-5 pr-5">
+        <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
             <div class="col-sm-12  text-center p-5">
                 <h3>Fil d'actualité</h3>
             </div>
@@ -48,20 +48,20 @@
 
         </div>
 
-        <div class="col-sm-4 p-5">
+        <div class="col-sm-2 p-5 align-center">
         <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h3>Séries suivis</h3>
+            <div class="col-sm-12 bg-danger test text-center m-auto">
+                <h6>Séries suivis</h6>
             </div>
         </a>
         <a href="#">
             <div class="col-sm-12 bg-danger test text-center">
-                <h3>Séries à regarder plus tard</h3>
+                <h6 class="align-middle">Séries à regarder plus tard</h6>
             </div>
         </a>
         <a href="#">    
-            <div class="col-sm-12 bg-danger test text-center">
-                <h3>Mes vidéos</h3>
+            <div class="col-sm-12 bg-danger test text-center pt-auto pb-auto">
+                <h6>Mes vidéos</h6>
             </div>
         </a>    
         </div>

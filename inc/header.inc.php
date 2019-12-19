@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Logo</a>
+        <a class="nav-link" href="index.php">Logo</a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -36,7 +36,7 @@
         <a class="nav-link" href="#" >Mon profil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Ajouter une vidéo</a>
+        <a class="nav-link" href="ajoutVideo.php" >Ajouter une vidéo</a>
       </li>
     </ul>
 
