@@ -1,8 +1,14 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                Test
+            <div class="col-sm">
+                Info uno
+            </div>
+            <div class="col-sm">
+                Info dos
+            </div>
+            <div class="col-sm">
+                Info tres
             </div>
         </div>
     </div>
