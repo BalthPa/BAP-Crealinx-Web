@@ -1,23 +1,58 @@
 <?php include ('../inc/header.inc.php') ?>
 
+
 <div class='container-fluid'>
     <div class="row">
         <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
             <div class="col-sm-12  text-center p-5">
                 <h3>Fil d'actualité</h3>
             </div>
-            <div class="col-sm-12 bg-warning mb-5">
+
+            <form method='post'>
+                <div class="form-group">
+                    <input type="text" class="form-control" name='user' aria-describedby="emailHelp" placeholder="User">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" name='content' placeholder="Post"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <div class="dropdown-divider"></div>
+            </form>
+
+            <?php //ENVOI DONNEES A LA BDD
+
+            include('../inc/connection.inc.php');
+            $req = $bdd->prepare('INSERT INTO blog (user, text) VALUES (:user, :text)');
+             $req->execute(array(
+                'user' => $_POST['user'],
+                'text' => $_POST['content']
+            ));
+
+            ?>
+
+            <?php  //RECUPERATION DES DONNEES
+                include('../inc/connection.inc.php');
+                $req = $bdd->query('SELECT * FROM blog ORDER BY id DESC');
+                while($data=$req->fetch()){
+?>
+
+            <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h3>John Doe</h3>
-                    </div>
-                    <div class="col-sm-6 bg-secondary">
-                        <p class="font-weight-bold">Ma nouvelle vidéo</p>
-                        <p>J'ai hate de vous la montrer !</p>
+                    <div class="col-sm-12 text-left">
+                        <h3><?= $data['user'] ?></h3>
+                        <p><?= $data['text'] ?></p>
                     </div>
                 </div>
-            </div>
+            </div>    
 
+<?php
+                }
+                $req->CloseCursor();
+            ?>
+
+
+           
+            <!--
             <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
                     <div class="col-sm-12 text-left">
@@ -43,10 +78,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis!</p>
                     </div>
                 </div>
-            </div>
-            
-
-        </div>
+            </div> -->
+        </div> 
 
         <div class="col-sm-2 p-5 align-center">
         <a href="#">

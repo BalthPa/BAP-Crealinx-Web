@@ -34,7 +34,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="categorie.php?categorie=Thriller">Thriller</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Horreur">Western</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Western">Western</a>
 
         </div>
       </li>
