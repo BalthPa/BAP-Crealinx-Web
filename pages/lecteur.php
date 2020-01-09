@@ -2,9 +2,35 @@
 
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-8 bg-primary text-center pl-5 pr-5"></div>
+        <div class="col-sm-10 bg-primary text-center">
 
-        <div class="col-sm-4 p-5">
+        <?php 
+
+            include ('../inc/connection.inc.php');
+
+            $id_url = $_GET['creator'];
+            $req = $bdd->query("SELECT * FROM video WHERE id='$id_url'");
+            
+            //$req->execute(array($_GET['creator']));
+
+            while($data =$req->fetch()){
+                $yt_id = substr($data['url'], -11);
+        ?>
+
+        <div class='video col-sm-10'>  
+            <h1><?php echo $data['title'] ?></h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>            
+
+        <?php
+        }
+        $req->closeCursor(); 
+        ?>
+
+        </div>
+
+        <div class="col-sm-2 p-5">
         <a href="#">
             <div class="col-sm-12 bg-danger test text-center">
                 <h3>Séries suivis</h3>

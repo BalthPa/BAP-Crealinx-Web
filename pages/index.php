@@ -50,17 +50,17 @@
 
         <div class="col-sm-2 p-5 align-center">
         <a href="#">
-            <div class="col-sm-12 bg-danger test text-center m-auto">
+            <div class="col-sm-12 bg-danger block-series text-center m-auto">
                 <h6>Séries suivis</h6>
             </div>
         </a>
         <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
+            <div class="col-sm-12 bg-danger block-series text-center">
                 <h6 class="align-middle">Séries à regarder plus tard</h6>
             </div>
         </a>
-        <a href="#">    
-            <div class="col-sm-12 bg-danger test text-center pt-auto pb-auto">
+        <a href="mesVideos.php">    
+            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
                 <h6>Mes vidéos</h6>
             </div>
         </a>    

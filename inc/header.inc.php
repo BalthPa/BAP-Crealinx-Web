@@ -25,11 +25,17 @@
           Catégories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
+          
+          <a class="dropdown-item" href="categorie.php?categorie=Action">Action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Humour</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Comédie">Comédie</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Horreur</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Horreur">Horreur</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="categorie.php?categorie=Thriller">Thriller</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="categorie.php?categorie=Horreur">Western</a>
+
         </div>
       </li>
       <li class="nav-item">

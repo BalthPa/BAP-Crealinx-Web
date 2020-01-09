@@ -3,14 +3,15 @@
 <div class='container-fluid'>
     <div class="row">
         <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
-        <h1 class="text-center">Mes vidéos</h1>
+        <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
             <div class="row">
             <?php 
 
 
             include ('../inc/connection.inc.php');
 
-            $req = $bdd->query('SELECT * FROM video');
+            $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
+            $req->execute(array($_GET['categorie']));
             while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
             ?>
@@ -30,17 +31,22 @@ $req->closeCursor();
         </div>  
         </div>
 
-        <div class="col-sm-2 p-5">
+        <div class="col-sm-2 p-5 align-center">
         <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h4>Séries suivis</h4>
+            <div class="col-sm-12 bg-danger block-series text-center m-auto">
+                <h6>Séries suivis</h6>
             </div>
         </a>
         <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h4>Séries à regarder plus tard</h4>
+            <div class="col-sm-12 bg-danger block-series text-center">
+                <h6 class="align-middle">Séries à regarder plus tard</h6>
             </div>
-        </a>   
+        </a>
+        <a href="mesVideos.php">    
+            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
+                <h6>Mes vidéos</h6>
+            </div>
+        </a>    
         </div>
     </div>
 </div>
