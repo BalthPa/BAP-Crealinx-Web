@@ -4,12 +4,24 @@ ul{
 li{
     margin: 0 5%;
 }
+
+
+
+
+.div-series{
+    margin-bottom: 80%;
+}
 .block-series{
-    height: 100px;
-    margin: 10% 0;
+    height: 15vh;
+    width: 100px;
+    margin: 20px auto;
 }
 
 a, a:hover{
     text-decoration:none;
     color: black;
+}
+
+.foooter{
+    background-color: #9B9B9B;
 }

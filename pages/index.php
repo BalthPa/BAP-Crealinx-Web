@@ -44,29 +44,39 @@
                     </div>
                 </div>
             </div>
-            
+         </div>
 
-        </div>
+        <div class="col-sm-2">
 
-        <div class="col-sm-2 p-5 align-center">
-        <a href="#">
-            <div class="col-sm-12 bg-danger block-series text-center m-auto">
-                <h6>Séries suivis</h6>
+            <div class="div-series">
+
+                <a href="#">
+                    <div class="col-sm-12 bg-danger block-series text-center">
+                        <h6> Séries suivies </h6>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="col-sm-12 bg-danger block-series text-center">
+                        <h6 class="align-middle"> Séries à regarder plus tard </h6>
+                    </div>
+                </a>
+                <a href="mesVideos.php">    
+                    <div class="col-sm-12 bg-danger block-series text-center">
+                        <h6>Mes vidéos</h6>
+                    </div>
             </div>
-        </a>
-        <a href="#">
-            <div class="col-sm-12 bg-danger block-series text-center">
-                <h6 class="align-middle">Séries à regarder plus tard</h6>
+
+            <div class="div-series btn-group-vertical" role="group" aria-label="Basic example">
+                <button type="button" class="block-series btn btn-secondary col-sm-12">Left</button>
+                <button type="button" class="block-series btn btn-secondary col-sm-12">Middle</button>
+                <button type="button" class="block-series btn btn-secondary col-sm-12">Right</button>
             </div>
-        </a>
-        <a href="mesVideos.php">    
-            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
-                <h6>Mes vidéos</h6>
-            </div>
+
+            <?php include ('../inc/footer.inc.php') ?>
         </a>    
         </div>
     </div>
 </div>
 
-<?php include ('../inc/footer.inc.php') ?>
+
 
