@@ -2,18 +2,20 @@
 
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
-            <div class="col-sm-12  text-center p-5">
-                <h3>Fil d'actualité</h3>
+        <div class="actu col-sm-9 border border-info text-center pl-5 pr-5">
+
+            <div class="col-sm-12  text-center p-3">
+                <h3> Fil d'actualités </h3>
             </div>
+
             <div class="col-sm-12 bg-warning mb-5">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h3>John Doe</h3>
+                        <h3> John Doe </h3>
                     </div>
                     <div class="col-sm-6 bg-secondary">
-                        <p class="font-weight-bold">Ma nouvelle vidéo</p>
-                        <p>J'ai hate de vous la montrer !</p>
+                        <p class="font-weight-bold"> Ma nouvelle vidéo </p>
+                        <p> J'ai hâte de vous la montrer ! </p>
                     </div>
                 </div>
             </div>
@@ -44,36 +46,19 @@
                     </div>
                 </div>
             </div>
+            
          </div>
 
-        <div class="col-sm-2">
+        <div class="right-side border border-success col-sm-3">
 
-            <div class="div-series">
-
-                <a href="#">
-                    <div class="col-sm-12 bg-danger block-series text-center">
-                        <h6> Séries suivies </h6>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="col-sm-12 bg-danger block-series text-center">
-                        <h6 class="align-middle"> Séries à regarder plus tard </h6>
-                    </div>
-                </a>
-                <a href="mesVideos.php">    
-                    <div class="col-sm-12 bg-danger block-series text-center">
-                        <h6>Mes vidéos</h6>
-                    </div>
-            </div>
-
-            <div class="div-series btn-group-vertical" role="group" aria-label="Basic example">
-                <button type="button" class="block-series btn btn-secondary col-sm-12">Left</button>
-                <button type="button" class="block-series btn btn-secondary col-sm-12">Middle</button>
-                <button type="button" class="block-series btn btn-secondary col-sm-12">Right</button>
+            <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
+                <button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button>
+                <button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button>
+                <button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button>
             </div>
 
             <?php include ('../inc/footer.inc.php') ?>
-        </a>    
+          
         </div>
     </div>
 </div>
