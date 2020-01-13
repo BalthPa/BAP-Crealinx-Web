@@ -48,26 +48,20 @@ li{
     list-style: none;
 }
 
-.facebook {
-    background-image: url("../img/facebook.png");
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    /* border: 1px solid black; */
-}
-.twitter {
-    background-image: url("../img/twitter.png");
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    /* border: 1px solid black; */
-}
-.instagram {
-    background-image: url("../img/instagram.png");
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    /* border: 1px solid black; */
+.img-fluid {
+    height: 10%;
+    width: 10%;
 }
 
+.bio  {
+    padding-right: 10%;
+    padding-left: 10%;
+}
 
+.footer {
+    background-image: url('../img/2252.jpg');
+}
+
+#mesRealisations {
+    padding-bottom: 5%;
+}

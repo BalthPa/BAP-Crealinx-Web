@@ -9,23 +9,28 @@
 
     <div>
         <h3 class="text-center"> Crealinx </h3>
-        <p> Plateforme de web-séries accessible pour tous </p>
+        <p class="text-center"> Plateforme de web-séries accessible pour tous </p>
     </div>
-    <div>
-        <h5> Liens utiles </h5>
-            <ul class="footer-links">
-                <li> À propos </li>
-            </ul>
+
+    
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+            <img src="../img/mail.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col order-12">
+            <img src="../img/twitter.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col order-1">
+            <img src="../img/instagram.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col">
+            <img src="../img/facebook.png" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
     </div>
-    <div>
-        <h4> Réseaux </h4>
-           <div class="facebook"></div>
-           <div class="twitter"></div>
-           <div class="instagram"></div> 
-    </div>
-    <div>
-        <h4> Contactez-nous ! </h4>
-    </div>
+
+
     <h6 class="text-center"> © 2020 Crealinx </h6> 
 </div>
 
