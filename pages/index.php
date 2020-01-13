@@ -58,7 +58,7 @@
             </div>
 
             <?php include ('../inc/footer.inc.php') ?>
-        </a>    
+          
         </div>
     </div>
 </div>

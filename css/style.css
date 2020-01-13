@@ -7,6 +7,17 @@ li{
 
 
 
+
+
+
+.logo {
+    font-size: 20px;
+}
+
+
+
+
+
 .actu {
     margin-top: 10vh;
     background-color: #ECECEC;;
@@ -16,10 +27,10 @@ li{
     margin-top: 10vh;
 }
 
-.div-series{
+.div-series {
     margin-bottom: 80%;
 }
-.block-series{
+.block-series {
     height: 15vh;
     width: 100px;
     margin: 10vh auto;
@@ -27,11 +38,34 @@ li{
     color: #323232;
 }
 
-a, a:hover{
-    text-decoration:none;
-    color: black;
+
+
+.footer {
+    background-color: #9B9B9B; 
 }
 
-.foooter{
-    background-color: #9B9B9B;
+.footer-links {
+    list-style: none;
+}
+
+.facebook {
+    background-image: url("../img/facebook.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+}
+.twitter {
+    background-image: url("../img/twitter.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+}
+.instagram {
+    background-image: url("../img/instagram.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
 }
