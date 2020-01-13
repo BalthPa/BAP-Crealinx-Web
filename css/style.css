@@ -8,11 +8,22 @@ li{
 
 
 
-
-
-.logo {
-    font-size: 20px;
+.profil {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/profil.png);
+    background-size: cover;
+    border: 1px solid black;
 }
+.camera-plus {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/camera-plus.png);
+    background-size: cover;
+    border: 1px solid black;
+}
+
+
 
 
 
@@ -41,31 +52,31 @@ li{
 
 
 .footer {
-    background-color: #9B9B9B; 
+    background-color: #ECECEC; 
 }
 
 .footer-links {
-    list-style: none;
+    list-style-type: circle;
 }
 
 .facebook {
     background-image: url("../img/facebook.png");
     background-size: cover;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     /* border: 1px solid black; */
 }
 .twitter {
     background-image: url("../img/twitter.png");
     background-size: cover;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     /* border: 1px solid black; */
 }
 .instagram {
     background-image: url("../img/instagram.png");
     background-size: cover;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     /* border: 1px solid black; */
 }

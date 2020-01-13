@@ -7,25 +7,27 @@
 
 <div class="footer col-sm-12 border border-danger">
 
-    <div>
+    <div class="footer-parts">
         <h3 class="text-center"> Crealinx </h3>
         <p> Plateforme de web-séries accessible pour tous </p>
     </div>
-    <div>
+    <div class="footer-parts mt-5">
         <h5> Liens utiles </h5>
             <ul class="footer-links">
                 <li> À propos </li>
             </ul>
     </div>
-    <div>
+    <div class="footer-parts mt-5">
         <h4> Réseaux </h4>
-           <div class="facebook"></div>
-           <div class="twitter"></div>
-           <div class="instagram"></div> 
+        <div class="d-flex justify-content-around"">
+            <div class="facebook"></div>
+            <div class="twitter"></div>
+            <div class="instagram"></div>
+        </div> 
     </div>
-    <div>
-        <h4> Contactez-nous ! </h4>
-    </div>
+    
+    <a href="contact.php"> <h5 class="text-center m-5"> Contactez-nous ! </h5> </a>
+    
     <h6 class="text-center"> © 2020 Crealinx </h6> 
 </div>
 
