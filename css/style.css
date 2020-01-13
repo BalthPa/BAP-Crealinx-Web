@@ -7,6 +7,14 @@ li{
 
 
 
+.actu {
+    margin-top: 10vh;
+    background-color: #ECECEC;;
+}
+
+.right-side {
+    margin-top: 10vh;
+}
 
 .div-series{
     margin-bottom: 80%;
@@ -14,7 +22,9 @@ li{
 .block-series{
     height: 15vh;
     width: 100px;
-    margin: 20px auto;
+    margin: 10vh auto;
+    background-color: #ECECEC;
+    color: #323232;
 }
 
 a, a:hover{
