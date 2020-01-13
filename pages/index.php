@@ -19,7 +19,8 @@
                 <div class="dropdown-divider"></div>
             </form>
 
-            <?php //ENVOI DONNEES A LA BDD
+            <?php 
+            //ENVOI DONNEES A LA BDD
 
             include('../inc/connection.inc.php');
             $req = $bdd->prepare('INSERT INTO blog (user, text) VALUES (:user, :text)');
@@ -30,11 +31,12 @@
 
             ?>
 
-            <?php  //RECUPERATION DES DONNEES
+            <?php  
+            //RECUPERATION DES DONNEES
                 include('../inc/connection.inc.php');
                 $req = $bdd->query('SELECT * FROM blog ORDER BY id DESC');
                 while($data=$req->fetch()){
-?>
+            ?>
 
             <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
@@ -43,9 +45,10 @@
                         <p><?= $data['text'] ?></p>
                     </div>
                 </div>
-            </div>    
+            </div>
+            <div class="dropdown-divider"></div>    
 
-<?php
+            <?php
                 }
                 $req->CloseCursor();
             ?>
@@ -84,17 +87,17 @@
         <div class="col-sm-2 p-5 align-center">
         <a href="#">
             <div class="col-sm-12 bg-danger block-series text-center m-auto">
-                <h6>Séries suivis</h6>
+                <h4>Séries suivis</h4>
             </div>
         </a>
         <a href="#">
             <div class="col-sm-12 bg-danger block-series text-center">
-                <h6 class="align-middle">Séries à regarder plus tard</h6>
+                <h4 class="align-middle">Séries à regarder plus tard</h4>
             </div>
         </a>
         <a href="mesVideos.php">    
             <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
-                <h6>Mes vidéos</h6>
+                <h4>Mes vidéos</h4>
             </div>
         </a>    
         </div>
