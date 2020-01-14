@@ -1,8 +1,12 @@
+<?php include('../inc/header.inc.php') ?>
+
 <div class='container-fluid'>
     <div class="row">
+
 <?php
     include('../inc/connection.inc.php');
-    $req = $bdd->query("SELECT * FROM accounts WHERE id = '".$_SESSION['id']."'");
+    $req = $bdd->prepare('SELECT * FROM accounts WHERE username = ?');
+    $req->execute(array($_GET['creator']));
     
     while($data = $req->fetch()){
         ?>
@@ -10,7 +14,6 @@
 
             <div class="col-sm-12 text-center p-3">
                 <h1>Profil</h1>
-                <a href='deconnexion.php' class='text-danger'>Se deconnecter</a>
             </div>
 
             <img class="rounded-circle w-25 p-3" src="../img/profil.jpg" alt=""/>
@@ -23,9 +26,6 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <span class="badge badge-dark pull">Rôle : <?= $data['role'] ?></span>
-                    </div>
-                    <div class="col-sm-12">
-                        <span class="badge badge-dark">Date de naissance : 14/05/2000</span>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,8 @@
 
 
             <?php
-                $req = $bdd->query("SELECT * FROM video WHERE id_creator = '".$_SESSION['id']."'");
+                $req = $bdd->prepare("SELECT * FROM video WHERE creator = ?");
+                $req->execute(array($_GET['creator']));
                 while($data=$req->fetch()){
                     $yt_id = substr($data['url'], -11);
                 ?>
@@ -67,8 +68,9 @@
     }
     $req->closeCursor(); 
     ?>
-        </div>
-        </div>
+    </div>
+    </div>
+
         </div>
 
 
@@ -83,3 +85,5 @@
 
     </div>
 </div>
+
+<?php include('../inc/footer.php') ?>

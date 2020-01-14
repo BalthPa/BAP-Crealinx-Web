@@ -30,24 +30,7 @@ $req->closeCursor();
 ?>
         </div>  
         </div>
-
-        <!--<div class="col-sm-3 p-5 align-center">
-        <a href="test.php">
-            <div class="col-sm-12 bg-danger block-series text-center m-auto">
-                <h4>Séries suivis</h4>
-            </div>
-        </a>
-        <a href="#">
-            <div class="col-sm-12 bg-danger block-series text-center">
-                <h4 class="align-middle">Séries à regarder plus tard</h4>
-            </div>
-        </a>
-        <a href="mesVideos.php">    
-            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
-                <h4>Mes vidéos</h4>
-            </div>
-        </a>    
-        </div>-->
+        
         <div class="right-side col-sm-3">
 
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">

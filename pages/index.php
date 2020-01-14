@@ -46,10 +46,12 @@
 
             <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
+                    <a href='profileShow.php?creator=<?= $data['username']?>' class='col-sm-12'>
                     <div class="col-sm-12 text-left">
                         <p class="font-weight-bold"><?= $data['username'] ?></p>
                         <p><?= $data['text'] ?></p>
                     </div>
+                    </a>
                 </div>
             </div>
             <div class="dropdown-divider"></div>    

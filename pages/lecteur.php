@@ -21,10 +21,9 @@
             <h1><?php echo $data['title'] ?></h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3>Créateur : <?= $data['creator'] ?></h3>
+        <h3>Créateur : <a href='profileShow.php?creator=<?= $data['creator'] ?>'><?= $data['creator'] ?></a></h3>
         <h4>Synopsis</h4>
         <p class='text-center'> <?= $data['synopsis'] ?></p>
-
 
 
         </div>            
