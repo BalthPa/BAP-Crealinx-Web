@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <title>Crealinx</title>
+    <title> Pop-corn Series </title>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Logo</a>
+        <a class="logo nav-link" href="index.php"> Crealinx </a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -28,23 +28,24 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           
-          <a class="dropdown-item" href="categorie.php?categorie=Action">Action</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Action"> Action </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Comédie">Comédie</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Comédie"> Comédie </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Horreur">Horreur</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Horreur </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Thriller">Thriller</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Thriller"> Thriller </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Western">Western</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Western </a>
+
 
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Mon profil</a>
+        <a class="nav-link" href="#" > Mon profil </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ajoutVideo.php" >Ajouter une vidéo</a>
+        <a class="nav-link" href="ajoutVideo.php" > Ajouter une vidéo </a>
       </li>
     </ul>
 

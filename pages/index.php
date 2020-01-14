@@ -1,9 +1,10 @@
 <?php include ('../inc/header.inc.php') ?>
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
-            <div class="col-sm-12  text-center p-5">
-                <h3>Fil d'actualité</h3>
+        <div class="actu col-sm-9 border border-info text-center pl-5 pr-5">
+
+            <div class="col-sm-12  text-center p-3">
+                <h3> Fil d'actualités </h3>
             </div>
 
             <form method='post'>
@@ -66,7 +67,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Trop bien la dernière vidéo de</p>
+                        <p> Trop bien la dernière vidéo de </p>
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus quae minima eius natus quidem amet consectetur, laborum provident accusamus deserunt vero ipsam in nisi maiores tempora, eum ipsum sapiente.</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus quae minima eius natus quidem amet consectetur, laborum provident accusamus deserunt vero ipsam in nisi maiores tempora, eum ipsum sapiente. </p>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis!</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis! </p>
                     </div>
                 </div>
             </div> -->
@@ -106,6 +107,7 @@
                 <h4>Mes vidéos</h4>
             </div>
         </a>    
+
         </div>
     </div>
 </div>
