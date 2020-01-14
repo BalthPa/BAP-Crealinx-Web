@@ -17,10 +17,12 @@
                 $yt_id = substr($data['url'], -11);
         ?>
 
-        <div class='video col-sm-10'>  
+        <div class='video col-sm-12 text-center'>  
             <h1><?php echo $data['title'] ?></h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>Créateur : <br><?= $data['creator'] ?></h3>
+
         </div>            
 
         <?php
@@ -41,7 +43,7 @@
                 <h3>Séries à regarder plus tard</h3>
             </div>
         </a>
-        <a href="#">    
+        <a href="mesVideos.php">    
             <div class="col-sm-12 bg-danger test text-center">
                 <h3>Mes vidéos</h3>
             </div>

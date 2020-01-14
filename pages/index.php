@@ -24,14 +24,18 @@
 
             <?php 
             //ENVOI DONNEES A LA BDD
-
-            include('../inc/connection.inc.php');
-            $req = $bdd->prepare('INSERT INTO blog (id_user, username, text) VALUES (:id_user, :username, :text)');
-             $req->execute(array(
-                'id_user' => $_POST['id_user'],
-                'username' => $_POST['username'],
-                'text' => $_POST['content']
-            ));
+            if (isset($_SESSION['id'])){
+                include('../inc/connection.inc.php');
+                $req = $bdd->prepare('INSERT INTO blog (id_user, username, text) VALUES (:id_user, :username, :text)');
+                 $req->execute(array(
+                    'id_user' => $_POST['id_user'],
+                    'username' => $_POST['username'],
+                    'text' => $_POST['content']
+                ));
+            }
+            else{
+                echo " N'oublie pas de te connecter !";
+            }
 
             ?>
 

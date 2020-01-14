@@ -3,7 +3,7 @@
 	include ("../inc/connection.inc.php");
 	
 	// Insérer dans la table galerie, à la place des entrées énoncées
-	$req = $bdd->prepare('INSERT INTO video(url, title, categorie, team, id_creator) VALUES(:url, :title, :categorie, :team, :creator)');
+	$req = $bdd->prepare('INSERT INTO video(url, title, categorie, team, synopsis, id_creator, creator) VALUES(:url, :title, :categorie, :team, :synopsis, :id_creator, :creator)');
 		
 	// Création d'une nouvelle ligne du tableau, on remplace les champs par ceux insérer par l'admin
 	$req->execute(array(
@@ -11,7 +11,9 @@
 	'title' => $_POST['title'],
 	'categorie' => $_POST['categorie'],
 	'team' => $_POST['team'],
-	'creator' => $_POST['id_creator']
+	'synopsis' => $_POST['synopsis'],
+	'id_creator' => $_POST['id_creator'],
+	'creator' => $_POST['creator']
     ));
     
     echo "envoi réussi"
