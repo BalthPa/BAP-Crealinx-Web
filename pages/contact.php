@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       $sql = "INSERT INTO contact (first_name, last_name, email, biography)
               VALUES (:first_name, :last_name, :email, :biography)";
 
-      $stmt = $conn -> prepare($sql);
+      $stmt = $bdd -> prepare($sql);
 
       $stmt -> execute(['first_name' => $first_name, 'last_name' => $last_name, 
                         'email' => $email, 'biography' => $biography]);

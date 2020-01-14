@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Trop bien la dernière vidéo de</p>
+                        <p> Trop bien la dernière vidéo de </p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus quae minima eius natus quidem amet consectetur, laborum provident accusamus deserunt vero ipsam in nisi maiores tempora, eum ipsum sapiente.</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus quae minima eius natus quidem amet consectetur, laborum provident accusamus deserunt vero ipsam in nisi maiores tempora, eum ipsum sapiente. </p>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-left">
                         <h3 >Jane Doe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis!</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis! </p>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,9 @@
                 <button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button>
             </div>
 
-            <?php include ('../inc/footer.inc.php') ?>
+        <hr class="bg-dark">
+
+        <?php include ('../inc/footer.inc.php') ?>
           
         </div>
     </div>

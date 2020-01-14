@@ -6,8 +6,8 @@ $pw = '';
 
 
 try {
-    $conn = new PDO($db_host, $user, $pw);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $bdd = new PDO($db_host, $user, $pw);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
