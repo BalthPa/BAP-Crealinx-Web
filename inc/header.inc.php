@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,7 +15,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Logo</a>
+        <a class="nav-link" href="index.php">Logo</a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -25,15 +26,29 @@
           Catégories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
+          
+          <a class="dropdown-item" href="categorie.php?categorie=Action">Action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Humour</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Comédie">Comédie</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Horreur</a>
+          <a class="dropdown-item" href="categorie.php?categorie=Horreur">Horreur</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="categorie.php?categorie=Thriller">Thriller</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="categorie.php?categorie=Western">Western</a>
+
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Disabled</a>
+        <a class="nav-link" href="#" >Mon profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ajoutVideo.php" >Ajouter une vidéo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php" >Créer un compte</a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="login.php" >Se connecter</a>
       </li>
     </ul>
 

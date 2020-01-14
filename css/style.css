@@ -8,14 +8,15 @@ ul{
 li{
     margin: 0 5%;
 }
-.test{
+.block-series{
     height: 100px;
     margin: 10% 0;
 }
 
-
-
- 
+a, a:hover{
+    text-decoration:none;
+    color: black;
+}
 .footer {
     position: fixed;
     left: 0;
