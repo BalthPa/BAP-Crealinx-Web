@@ -1,3 +1,19 @@
+
+/* ALL */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.col-sm-8{
+    height: 100px;
+}
+.col-sm-4{
+    height: 100px;
+}
+
+/* NAV */
 ul{
     width: 100%;
 }
@@ -5,18 +21,11 @@ li{
     margin: 0 5%;
 }
 
-
-
-
-
-
 .logo {
     font-size: 20px;
 }
 
-
-
-
+/* RIGHT DIV */
 
 .actu {
     margin-top: 10vh;
@@ -38,7 +47,7 @@ li{
     color: #323232;
 }
 
-
+/* FOOTER */
 
 .footer {
     background-color: #9B9B9B; 
@@ -47,6 +56,22 @@ li{
 .footer-links {
     list-style: none;
 }
+
+.footer {
+    background-image: url('../img/2252.jpg');
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+
+/* PAGE PROFIL */
 
 .img-fluid {
     height: 10%;
@@ -58,16 +83,17 @@ li{
     padding-left: 10%;
 }
 
-.footer {
-    background-image: url('../img/2252.jpg');
-}
-
 #mesRealisations {
     padding-bottom: 5%;
 }
-.col-sm-8{
+
+
+.block-series{
     height: 100px;
+    margin: 10% 0;
 }
-.col-sm-4{
-    height: 100px;
+
+a, a:hover{
+    text-decoration:none;
+    color: black;
 }
