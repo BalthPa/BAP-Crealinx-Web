@@ -1,4 +1,6 @@
+
 <?php 
+	include('../inc/header.inc.php');
 	// Connexion à la base de données
 	include ("../inc/connection.inc.php");
 	
@@ -16,10 +18,12 @@
 	'creator' => $_POST['creator']
     ));
     
-    echo "envoi réussi"
+    echo "envoi réussi";
 
 ?>
 
 
 
 <a href="index.php"><button>Retour à l'accueil</button></a>
+
+<?php include('../inc/footer.inc.php') ?>

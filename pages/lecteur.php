@@ -2,7 +2,7 @@
 
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-10 bg-primary text-center">
+        <div class="col-sm-9 bg-primary text-center">
 
         <?php 
 
@@ -21,7 +21,11 @@
             <h1><?php echo $data['title'] ?></h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3>Créateur : <br><?= $data['creator'] ?></h3>
+        <h3>Créateur : <?= $data['creator'] ?></h3>
+        <h4>Synopsis</h4>
+        <p class='text-center'> <?= $data['synopsis'] ?></p>
+
+
 
         </div>            
 
@@ -32,22 +36,13 @@
 
         </div>
 
-        <div class="col-sm-2 p-5">
-        <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h3>Séries suivis</h3>
-            </div>
-        </a>
-        <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h3>Séries à regarder plus tard</h3>
-            </div>
-        </a>
-        <a href="mesVideos.php">    
-            <div class="col-sm-12 bg-danger test text-center">
-                <h3>Mes vidéos</h3>
-            </div>
-        </a>    
+        <div class="right-side col-sm-3">
+
+            <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
+                <a><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
+                <a><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
+                <a href='mesVideos.php'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
+            </div>          
         </div>
     </div>
 </div>

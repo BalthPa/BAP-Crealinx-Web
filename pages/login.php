@@ -1,15 +1,5 @@
 <?php include('../inc/header.inc.php') ?>
 
-<form method='post' >
-    <label>Nom d'utilisateur</label>
-    <input type='text' name='username' placeholder="Nom d'utilisateur">
-
-    <label>Mot de passe</label>
-    <input type='password' name='password' placeholder='Mot de passe'>
-
-    <input type='submit' value='Se connecter'>
-</form>
-
 <?php
 
 $passwordForm = $_POST['password'];
@@ -35,12 +25,15 @@ $data = $req->fetch();
         //$_SESSION['mail'] = $data['mail'];
         //$_SESSION['id'] = $data['id'];
 
-        echo 'Bienvenue ' . $_SESSION['username'];
+        echo '<h1>Bienvenue ' . $_SESSION['username'] . '</h1>';
+
+
 
     } else if ($passwordBdd !== $passwordTest) {
-        echo 'Mot de passe invalide';
+        echo '<h1>Mot de passe invalide<h1>';
     }
 
 ?>
+
 
 <?php include('../inc/footer.inc.php') ?>

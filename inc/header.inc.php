@@ -41,7 +41,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Mon profil</a>
+        <a class="nav-link" href="profil.php" >Mon profil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="ajoutVideo.php" >Ajouter une vidéo</a>
