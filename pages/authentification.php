@@ -1,6 +1,6 @@
 <?php include ('../inc/header.inc.php') ?>
 
-<?php
+<?php /*
 $passwordForm = $_POST['password'];
 $usernameForm = $_POST['username'];
 
@@ -14,6 +14,8 @@ $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
 while($data = $req->fetch()){
     $passwordBdd = $data['password'];
     $usernameBdd = $data['username'];
+    $mailBdd = $data['mail'];
+    $idBdd = $data['id'];
     echo $passwordBdd . '<br>';
     
 }
@@ -22,6 +24,8 @@ while($data = $req->fetch()){
         session_start();
 
         $_SESSION['username'] = $usernameBdd;
+        $_SESSION['mailBdd'] = $mailBdd;
+        $_SESSION['id'] = $idBdd;
         //$_SESSION['mail'] = $data['mail'];
         //$_SESSION['id'] = $data['id'];
 
@@ -32,7 +36,7 @@ while($data = $req->fetch()){
     } else{
         echo 'Mot de passe invalide';
     }
-
+*/
 
 ?>
 

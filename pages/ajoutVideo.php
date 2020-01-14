@@ -31,8 +31,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1">Nom de créateur</label>
-                <input type="text" class="form-control" name="creator">
+                <input type="hidden" class="form-control" name="id_creator" value='<?= $_SESSION['id']?>'>
             </div>
 
             <div class="form-group">

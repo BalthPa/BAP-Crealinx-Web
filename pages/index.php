@@ -10,7 +10,10 @@
 
             <form method='post'>
                 <div class="form-group">
-                    <input type="text" class="form-control" name='user' aria-describedby="emailHelp" placeholder="User">
+                    <input type="hidden" name='id_user' value='<?= $_SESSION['id'] ?>'>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name='username' value='<?= $_SESSION['username'] ?>'>
                 </div>
                 <div class="form-group">
                     <textarea type="text" class="form-control" name='content' placeholder="Post"></textarea>
@@ -23,9 +26,10 @@
             //ENVOI DONNEES A LA BDD
 
             include('../inc/connection.inc.php');
-            $req = $bdd->prepare('INSERT INTO blog (user, text) VALUES (:user, :text)');
+            $req = $bdd->prepare('INSERT INTO blog (id_user, username, text) VALUES (:id_user, :username, :text)');
              $req->execute(array(
-                'user' => $_POST['user'],
+                'id_user' => $_POST['id_user'],
+                'username' => $_POST['username'],
                 'text' => $_POST['content']
             ));
 
@@ -34,14 +38,14 @@
             <?php  
             //RECUPERATION DES DONNEES
                 include('../inc/connection.inc.php');
-                $req = $bdd->query('SELECT * FROM blog ORDER BY id DESC');
+                $req = $bdd->query('SELECT * FROM blog ORDER BY id DESC ');
                 while($data=$req->fetch()){
             ?>
 
             <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h3><?= $data['user'] ?></h3>
+                        <p class="font-weight-bold"><?= $data['username'] ?></p>
                         <p><?= $data['text'] ?></p>
                     </div>
                 </div>

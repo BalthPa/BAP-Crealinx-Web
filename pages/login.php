@@ -24,18 +24,20 @@ $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
 $data = $req->fetch();
     $passwordBdd = $data['password'];
     $usernameBdd = $data['username'];
+    $idBdd = $data['id'];
     //echo $passwordBdd . '<br>';
 
  if($passwordBdd === $passwordTest){
         session_start();
 
         $_SESSION['username'] = $usernameBdd;
+        $_SESSION['id'] = $idBdd;
         //$_SESSION['mail'] = $data['mail'];
         //$_SESSION['id'] = $data['id'];
 
         echo 'Bienvenue ' . $_SESSION['username'];
 
-    } else{
+    } else if ($passwordBdd !== $passwordTest) {
         echo 'Mot de passe invalide';
     }
 
