@@ -1,6 +1,4 @@
 <?php include ('../inc/header.inc.php') ?>
-
-
 <div class='container-fluid'>
     <div class="row">
         <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
