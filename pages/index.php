@@ -1,5 +1,4 @@
 <?php include ('../inc/header.inc.php') ?>
-
 <div class='container-fluid'>
     <div class="row">
         <div class="actu col-sm-9 border border-info text-center pl-5 pr-5">
@@ -8,18 +7,62 @@
                 <h3> Fil d'actualités </h3>
             </div>
 
-            <div class="col-sm-12 bg-warning mb-5">
+            <form method='post'>
+                <div class="form-group">
+                    <input type="hidden" name='id_user' value='<?= $_SESSION['id'] ?>'>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name='username' value='<?= $_SESSION['username'] ?>'>
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" name='content' placeholder="Post"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <div class="dropdown-divider"></div>
+            </form>
+
+            <?php 
+            //ENVOI DONNEES A LA BDD
+            if (isset($_SESSION['id'])){
+                include('../inc/connection.inc.php');
+                $req = $bdd->prepare('INSERT INTO blog (id_user, username, text) VALUES (:id_user, :username, :text)');
+                 $req->execute(array(
+                    'id_user' => $_POST['id_user'],
+                    'username' => $_POST['username'],
+                    'text' => $_POST['content']
+                ));
+            }
+            else{
+                echo " N'oublie pas de te connecter !";
+            }
+
+            ?>
+
+            <?php  
+            //RECUPERATION DES DONNEES
+                include('../inc/connection.inc.php');
+                $req = $bdd->query('SELECT * FROM blog ORDER BY id DESC ');
+                while($data=$req->fetch()){
+            ?>
+
+            <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h3> John Doe </h3>
-                    </div>
-                    <div class="col-sm-6 bg-secondary">
-                        <p class="font-weight-bold"> Ma nouvelle vidéo </p>
-                        <p> J'ai hâte de vous la montrer ! </p>
+                    <div class="col-sm-12 text-left">
+                        <p class="font-weight-bold"><?= $data['username'] ?></p>
+                        <p><?= $data['text'] ?></p>
                     </div>
                 </div>
             </div>
+            <div class="dropdown-divider"></div>    
 
+            <?php
+                }
+                $req->CloseCursor();
+            ?>
+
+
+           
+            <!--
             <div class="col-sm-12 bg-warning mt-5 mb-5">
                 <div class="row">
                     <div class="col-sm-12 text-left">
@@ -45,25 +88,29 @@
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae quae vero tempora libero molestias! Distinctio doloremque magni odit cupiditate explicabo. Sapiente, maiores possimus odio maxime exercitationem sint libero nobis! </p>
                     </div>
                 </div>
+            </div> -->
+        </div> 
+
+        <div class="col-sm-2 p-5 align-center">
+        <a href="#">
+            <div class="col-sm-12 bg-danger block-series text-center m-auto">
+                <h4>Séries suivis</h4>
             </div>
-            
-         </div>
-
-        <div class="right-side border border-success col-sm-3">
-
-            <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
-                <button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button>
-                <button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button>
-                <button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button>
+        </a>
+        <a href="#">
+            <div class="col-sm-12 bg-danger block-series text-center">
+                <h4 class="align-middle">Séries à regarder plus tard</h4>
             </div>
+        </a>
+        <a href="mesVideos.php">    
+            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
+                <h4>Mes vidéos</h4>
+            </div>
+        </a>    
 
-        <hr class="bg-dark">
-
-        <?php include ('../inc/footer.inc.php') ?>
-          
         </div>
     </div>
 </div>
 
-
+<?php include ('../inc/footer.inc.php') ?>
 

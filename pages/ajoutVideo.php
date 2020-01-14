@@ -31,8 +31,16 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1">Nom de créateur</label>
-                <input type="text" class="form-control" name="creator">
+                <label for="exampleFormControlInput1">Synopsis</label>
+                <textarea class="form-control" name="synopsis"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="id_creator" value='<?= $_SESSION['id']?>'>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="creator" value='<?= $_SESSION['username']?>'>
             </div>
 
             <div class="form-group">

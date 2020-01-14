@@ -1,15 +1,11 @@
 <?php
 
-$db_host='mysql:dbname=bap-crealinx;host=localhost';
-$user = 'root';
-$pw = '';
+try{
+    $bdd = new PDO('mysql:host=127.0.0.1; port=8889 ;dbname=bap-crealinx', 'root', 'root');
+}
 
-
-try {
-    $bdd = new PDO($db_host, $user, $pw);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo 'Échec lors de la connexion : ' . $e->getMessage();
+catch(exception $e){
+    echo $e->getMessage();
 }
 
 ?>

@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -36,6 +38,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Western </a>
 
+
         </div>
       </li>
       <li class="nav-item">
@@ -48,3 +51,4 @@
 
   </div>
 </nav>
+
