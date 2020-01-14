@@ -16,7 +16,7 @@
                 $yt_id = substr($data['url'], -11);
             ?>
         <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-        <div class='video m-3'>
+        <div class='video m-1'>
         <h4><?php echo $data['title']?></h4>    
         <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
