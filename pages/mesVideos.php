@@ -7,9 +7,11 @@
             <div class="row">
             <?php 
 
+
             include ('../inc/connection.inc.php');
 
             $req = $bdd->query("SELECT * FROM video WHERE id_creator = '".$_SESSION['id']."'");
+
             while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
             ?>
