@@ -4,6 +4,7 @@
         <div class="col-sm-9 bg-primary text-center pl-5 pr-5 blog">
             <div class="col-sm-12  text-center p-5">
                 <h3>Fil d'actualité</h3>
+                <p>N'oublie pas de te connecter</p>
             </div>
 
             <form method='post'>
@@ -30,9 +31,6 @@
                     'username' => $_POST['username'],
                     'text' => $_POST['content']
                 ));
-            }
-            else{
-                echo " N'oublie pas de te connecter !";
             }
 
             ?>

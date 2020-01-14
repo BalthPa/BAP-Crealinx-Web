@@ -13,7 +13,7 @@
                 <a href='deconnexion.php' class='text-danger'>Se deconnecter</a>
             </div>
 
-            <img class="rounded-circle w-25 p-3" src="../img/profil.jpg" alt=""/>
+            <img class="rounded-circle w-25 p-3 border border-secondary" src="../img/pp.png" alt=""/>
 
             <div class="col-sm-12  text-center p-3">
                 <span class="badge badge-info text-uppercase"><?= $data['username'] ?></span>
