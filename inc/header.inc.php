@@ -45,11 +45,6 @@
       <li class="nav-item">
         <a class="nav-link" href="ajoutVideo.php" >Ajouter une vidéo</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="register.php" >Créer un compte</a>
-      </li><li class="nav-item">
-        <a class="nav-link" href="login.php" >Se connecter</a>
-      </li>
     </ul>
 
   </div>
