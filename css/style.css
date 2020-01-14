@@ -29,12 +29,14 @@ li{
 
 
 
-.actu {
+.actu {                                 /* Actualités index.php */
     margin-top: 10vh;
     background-color: #ECECEC;;
 }
 
-.right-side {
+
+
+.right-side {                   /* Sections 3 boutons de droite */
     margin-top: 10vh;
 }
 
@@ -48,6 +50,21 @@ li{
     background-color: #ECECEC;
     color: #323232;
 }
+
+
+
+
+.message-error {
+    background-color: rgb(255, 200, 200);
+}
+.message-success {
+    background-color: rgb(123, 255, 149);
+}
+
+
+
+
+
 
 
 
