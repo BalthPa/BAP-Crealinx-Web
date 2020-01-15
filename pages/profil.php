@@ -4,11 +4,11 @@
 include('../inc/header.inc.php');
 
 if(!empty($_SESSION['username']) == FALSE){
-    include('profilDeconnecte.php');
+    include('../inc/profilDeconnecte.inc.php');
 }
 else {
     //echo 'Bienvenue' . $_SESSION['username'];
-    include('profilConnecte.php');
+    include('../inc/profilConnecte.inc.php');
 }
 
 include('../inc/footer.inc.php');

@@ -68,14 +68,12 @@
     }
     $req->closeCursor(); 
     ?>
-    </div>
-    </div>
-
+            </div>
         </div>
+    </div>
 
 
         <div class="right-side col-sm-3">
-
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
                 <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
                 <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
@@ -86,4 +84,4 @@
     </div>
 </div>
 
-<?php include('../inc/footer.php') ?>
+<?php include('../inc/footer.inc.php') ?>

@@ -25,12 +25,13 @@ $data = $req->fetch();
         //$_SESSION['mail'] = $data['mail'];
         //$_SESSION['id'] = $data['id'];
 
-        echo '<h1>Bienvenue ' . $_SESSION['username'] . '</h1>';
+        include('../inc/profilConnecte.inc.php');
 
 
 
     } else if ($passwordBdd !== $passwordTest) {
-        echo '<h1>Mot de passe invalide<h1>';
+        echo '<h1 class="text-center text-danger col-sm-9">Mot de passe invalide</h1>';
+        include('../inc/profilDeconnecte.inc.php');
     }
 
 ?>
