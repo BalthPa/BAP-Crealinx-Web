@@ -1,17 +1,17 @@
 <?php include ('../inc/header.inc.php') ?>
 
+<?php include ('../inc/header.inc.php') ?>
+
 <div class='container-fluid'>
     <div class="row">
         <div class="col-sm-9 bg-primary text-center pl-5 pr-5">
-        <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
+        <h1 class="text-center">A regarder plus tard</h1>
             <div class="col-sm-12 d-flex flex-wrap">
             <?php 
 
-
             include ('../inc/connection.inc.php');
-
-            $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
-            $req->execute(array($_GET['categorie']));
+            $idViewer = $_SESSION['id'];
+            $req = $bdd->prepare("SELECT * FROM watchlater WHERE id_creator = $idViewer");
             while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
             ?>
@@ -30,12 +30,6 @@
 }
 $req->closeCursor(); 
 ?>
-
-    <?php 
-    $videoWatch = 'video_' . $_GET['video'];
-    $idViewer = $_SESSION['id'];
-
-    $change = $bdd->query("UPDATE watchlater SET $videoWatch = 1 WHERE id_creator = $idViewer"); ?>
         </div>  
         </div>
 
@@ -52,3 +46,6 @@ $req->closeCursor();
 
 <?php include ('../inc/footer.inc.php') ?>
 
+
+
+<?php include('../inc/footer.inc.php') ?>
