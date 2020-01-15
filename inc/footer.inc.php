@@ -37,7 +37,7 @@
 <div class="footer col-sm-12 border border-danger">
 
     <div class="footer-parts">
-        <h3 class="text-center"> Pop-corn Series </h3>
+        <h3 class="text-center"> Popcorn Series </h3>
         <p> Plateforme communautaire de web-séries </p>
     </div>
     <div class="footer-parts mt-3">
@@ -57,7 +57,7 @@
     
     <a href="contact.php"> <h5 class="text-center m-4"> Contactez-nous ! </h5> </a>
     
-    <h6 class="text-center"> © 2020 Crealinx </h6> 
+    <h6 class="text-center"> © 2020 Pop-corn Series </h6> 
 </div>
 
 
