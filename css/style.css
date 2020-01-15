@@ -58,7 +58,7 @@ a:hover{
 
 
 
-.actu {
+.actu {                                 /* Actualités (index.php) */
     margin-top: 10vh;
     background-color: #ECECEC;;
 }
@@ -67,7 +67,7 @@ a:hover{
 
 
 
-.right-side {                /* Sections 3 boutons de droite */
+.right-side {                   /* (Sections 3 boutons de droite) */
     margin-top: 10vh;
 }
 
@@ -82,7 +82,10 @@ a:hover{
     margin-bottom: 80%;
 }*/
 
-.message-error {
+
+
+
+.message-error {                                /* Messages de résultat d'envoi de données (contact.php) */
     background-color: rgb(255, 200, 200);
 }
 .message-success {

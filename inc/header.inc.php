@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <title> Pop-corn Series </title>
+    <title> Popcorn Series </title>
 </head>
 <body>
 
@@ -16,11 +16,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="logo nav-link" href="index.php"> Crealinx </a>
+        <a class="logo nav-link" href="index.php"> Popcorn Series </a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Rechercher </button>
     </form>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,7 +36,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="categorie.php?categorie=Thriller"> Thriller </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Western </a>
+          <a class="dropdown-item" href="categorie.php?categorie=Western"> Western </a>
 
 
         </div>
