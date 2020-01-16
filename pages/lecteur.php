@@ -9,7 +9,7 @@
             include ('../inc/connection.inc.php');
 
             $id_url = $_GET['creator'];
-            $req = $bdd->query("SELECT * FROM video WHERE id='$id_url'");
+            $req = $bdd->query("SELECT * FROM video WHERE id=$id_url");
             
             //$req->execute(array($_GET['creator']));
 
@@ -25,6 +25,8 @@
         <h4>Synopsis</h4>
         <p class='text-center'> <?= $data['synopsis'] ?></p>
 
+        <a href="lecteur.php?creator=<?php echo $_GET['creator'] ?>&video=<?php echo $data['id'] ?>">Ajouter</a>
+
 
         </div>            
 
@@ -33,14 +35,21 @@
         $req->closeCursor(); 
         ?>
 
+
+    <?php 
+    $idVideo = $_GET['video'];
+    $test = 'username_' . $_SESSION['id'];
+    $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo")
+    ?>
+
         </div>
 
         <div class="right-side col-sm-3">
 
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
-                <a><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
-                <a><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
-                <a href='mesVideos.php'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
+                <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
+                <a href='watchLater.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
+                <a href='mesVideos.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
             </div>          
         </div>
     </div>

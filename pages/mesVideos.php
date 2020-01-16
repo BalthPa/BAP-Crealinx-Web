@@ -9,8 +9,8 @@
 
 
             include ('../inc/connection.inc.php');
-
-            $req = $bdd->query("SELECT * FROM video WHERE id_creator = '".$_SESSION['id']."'");
+            $idCreator = $_SESSION['id'];
+            $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator");
 
             while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
@@ -35,7 +35,7 @@ $req->closeCursor();
 
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
                 <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
-                <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
+                <a href='watchLater.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
                 <a href='mesVideos.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
             </div>          
         </div>

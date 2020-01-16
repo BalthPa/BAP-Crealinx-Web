@@ -2,14 +2,15 @@
 
 <?php
 
-$passwordForm = $_POST['password'];
-$usernameForm = $_POST['username'];
+$passwordForm = htmlspecialchars($_POST['password']);
+$usernameForm = htmlspecialchars($_POST['username']);
 $passwordTest = md5($passwordForm);
 
 //echo $passwordForm . $usernameForm ;
 
 include('../inc/connection.inc.php');
 $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
+//$req->execute(array($usernameForm));
 //$req->execute(array('name' => $usernameForm));
 $data = $req->fetch();
     $passwordBdd = $data['password'];
@@ -29,6 +30,7 @@ $data = $req->fetch();
 
 
 
+        
     } else if ($passwordBdd !== $passwordTest) {
         echo '<h1 class="text-center text-danger col-sm-9">Mot de passe invalide</h1>';
         include('../inc/profilDeconnecte.inc.php');

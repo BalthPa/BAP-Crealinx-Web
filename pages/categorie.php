@@ -2,11 +2,10 @@
 
 <div class='container-fluid'>
     <div class="row">
-        <div class="col-sm-9 bg-primary text-center pl-5 pr-5">
+        <div class="col-sm-9 bg-primary text-center p-5">
         <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
             <div class="col-sm-12 d-flex flex-wrap">
             <?php 
-
 
             include ('../inc/connection.inc.php');
 
@@ -26,16 +25,17 @@
         <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>'>Ajouter</a>
 
 
+
+
 <?php
 }
 $req->closeCursor(); 
 ?>
 
-    <?php 
-    $videoWatch = 'video_' . $_GET['video'];
-    $idViewer = $_SESSION['id'];
-
-    $change = $bdd->query("UPDATE watchlater SET $videoWatch = 1 WHERE id_creator = $idViewer"); ?>
+<?php
+    $idVideo = $_GET['video'];
+    $test = 'username_' . $_SESSION['id'];
+    $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo") ?>
         </div>  
         </div>
 
@@ -43,7 +43,7 @@ $req->closeCursor();
 
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
                 <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
-                <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
+                <a href='watchLater.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
                 <a href='mesVideos.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
             </div>          
         </div>

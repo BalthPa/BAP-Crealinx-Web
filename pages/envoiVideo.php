@@ -18,8 +18,14 @@
 	'creator' => $_POST['creator']
     ));
     
-    echo "envoi réussi";
+	echo "envoi réussi";
 
+
+	$add = $bdd->prepare('INSERT INTO watchlater(title_video, url_video) VALUES (:title_video, :url_video)');
+	$add->execute(array(
+		'title_video' => $_POST['title'],
+		'url_video' => $_POST['url'],
+	))
 ?>
 
 

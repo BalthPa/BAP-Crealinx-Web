@@ -13,16 +13,12 @@
         <div class="actu col-sm-9 border border-info text-center pl-3 pr-3 mt-0">
 
             <div class="col-sm-12 text-center p-3">
-                <h1>Profil</h1>
+                <h1 class='text-uppercase'><?= $data['username'] ?></h1>
             </div>
 
             <img class="rounded-circle w-25 p-3 border border-secondary" src="../img/pp.png" alt=""/>
 
-            <div class="col-sm-12  text-center p-3">
-                <span class="badge badge-info text-uppercase"><?= $data['username'] ?></span>
-            </div>
-
-            <div class="col-sm-12 mb-5">
+            <div class="col-sm-12 mb-5 mt-5">
                 <div class="row">
                     <div class="col-sm-12">
                         <span class="badge badge-dark pull">Rôle : <?= $data['role'] ?></span>
@@ -76,7 +72,7 @@
         <div class="right-side col-sm-3">
             <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
                 <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
-                <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
+                <a href='watchLater.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
                 <a href='mesVideos.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
             </div>          
         </div>
