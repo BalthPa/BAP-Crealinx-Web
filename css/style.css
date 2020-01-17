@@ -1,4 +1,23 @@
+* {
+    font-family: "sofia-pro-medium";
+}
 
+@font-face {
+    font-family: "gilroy-extrabold";
+    src: url("/fonts/GILROY-EXTRABOLD.otf") 
+}
+@font-face {
+    font-family: "gilroy-light";
+    src: url("/fonts/GILROY-LIGHT.otf") 
+}
+@font-face {
+    font-family: "sofia-pro-bold";
+    src: url("/fonts/SOFIA-PRO-BOLD.ttf") 
+}
+@font-face {
+    font-family: "sofia-pro-medium";
+    src: url("/fonts/SOFIA-PRO-MEDIUM.ttf") 
+}
 /* ALL */
 
 html {
@@ -15,6 +34,10 @@ html {
     height: 100px;
 } */
 
+
+
+
+
 /* NAV */
 
 .navbar {
@@ -27,22 +50,22 @@ html {
     background-image: url(../img/logo-bg-white.png);
     background-size: cover;
     width: 60px;
-    height: 60px;
+    height: 56px;
     box-sizing: border-box;
 }
 
 .category-logo {
     background-image: url(../img/nine-dots.png);
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     box-sizing: border-box;
 }
 
 
 .add-video-logo {
-    width: 50px;
-    height: 50px;
+    width: 68px;
+    height: 45px;
     box-sizing: border-box;
     background-image: url(../img/camera-plus.png);
     background-size: cover;
@@ -50,8 +73,8 @@ html {
 
 
 .profile-pic-logo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     box-sizing: border-box;
     background-image: url(../img/pp.png);
     background-size: cover;
@@ -76,6 +99,10 @@ html {
     margin-top: 10vh;
     background-color: #ECECEC;
 }
+h3 {
+    font-family: "sofia-pro-bold";
+    text-transform: uppercase;
+}
 
 .blog {                                 /* Actualités (index.php) */
     max-height: 120vh;
@@ -84,13 +111,33 @@ html {
     border-radius: 5%;
 }
 
-.title-actus {
-    text-transform: uppercase;
-}
 
 .post {
     background-color: white;
 }
+
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #c6c6c6; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(155, 155, 155); 
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(128, 128, 128); 
+  }
 
 
 
