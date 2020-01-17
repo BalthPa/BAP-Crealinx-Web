@@ -15,9 +15,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
     if(strlen($first_name) >= 255 || !preg_match(" /^[a-zA-Z-'\s]+$/ ", $first_name) 
     || strlen($last_name) >= 255 || !preg_match(" /^[a-zA-Z-'\s]+$/ ", $last_name)) {
-      $status_false = "Veuillez renseigner des noms valides.";
+      $status_false = "* Veuillez renseigner des noms valides.";
     } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $status_false = "Veuillez rentrer une adresse e-mail valide.";
+      $status_false = "* Veuillez rentrer une adresse e-mail valide.";
     } else {
 
       $sql = "INSERT INTO contact (first_name, last_name, email, biography)
@@ -43,13 +43,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-<div class="container">
+<div class="container contact col-sm-8 mt-5 mb-5 p-5 shadow">
 
-    <h1 class="mt-5"> Contact </h1>
+    <h1 class="text-center"> Contact </h1>
         <form class="col-sm-12 m-0 p-0" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
             
             <fieldset class="mt-4">
-                <legend> Pour pouvoir nous transmettre votre avis, veuillez renseigner votre nom, prénom ainsi que votre adresse e-mail </legend>
+                <legend> Pour pouvoir nous transmettre votre avis, veuillez renseigner les champs suivants. <br />
+                         Les noms et prénoms ne doivent pas comporter d'accent.
+                </legend>
 
                 <?php if (!empty($status_false)) { 
                   echo '<p class="message-error text-danger mt-5 mb-2 p-4">' .$status_false. '</p>';
@@ -59,28 +61,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }?>
                  
                  <div class="form-group mt-3">
-                   <label for="nom"> Prénom </label>
-                   <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Jonathan">
+                   <input type="text" class="form-control rounded-pill pl-3" id="first_name" name="first_name" placeholder="Prénom">
                  </div>
 
                  <div class="form-group">
-                   <label for="nom"> Nom </label>
-                   <input type="text" class="form-control" id="last_name" name="last_name">
+                   <input type="text" class="form-control rounded-pill pl-3" id="last_name" name="last_name" placeholder="Nom de famille">
                  </div>
                  
                  <div class="form-group">
-                   <label for="email">Entrez votre adresse e-mail</label>
-                   <input type="email" class="form-control" id="email" name="email" placeholder="louis9@free.fr">
+                   <input type="email" class="form-control rounded-pill pl-3" id="email" name="email" placeholder="Adresse e-mail">
                  </div>
 
                  <div class="form-group">
-                   <label for="bio"> Votre message </label>
-                   <textarea class="form-control" id="biography" name="biography" rows="5"></textarea>
+                    <textarea class="form-control rounded-lg" id="biography" name="biography" rows="10"></textarea>
                  </div>
 
-                 <input class="btn btn-primary" type="submit" value="Soumettre">
+                 <input class="btn btn-primary submit mt-5 border-0" type="submit" value="Soumettre">
             </fieldset>
         </form>
 </div>
+
+<?php include ('../inc/footer.inc.php') ?>     
 
 

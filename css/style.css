@@ -2,51 +2,67 @@
 /* ALL */
 
 html {
+    margin: 0;
+    padding: 0;
     position: relative;
     min-height: 100%;
 }
 
-.col-sm-8{
+/* .col-sm-8{
     height: 100px;
 }
 .col-sm-4{
     height: 100px;
-}
+} */
 
 /* NAV */
 
-ul{
-    width: 100%;
-}
-li{
-    margin: 0 5%;
-}
-
-a{
-    text-decoration:none;
-    color:black;
-}
-a:hover{
-    text-decoration:none;
-    color: black;
+.navbar {
+    background-color: #FFEC62;
+    height: 70px;
 }
 
 
-
-.profil {
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/profil.png);
+.logo {
+    background-image: url(../img/logo-bg-white.png);
     background-size: cover;
-    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
 }
-.camera-plus {
-    width: 30px;
-    height: 30px;
+
+.category-logo {
+    background-image: url(../img/nine-dots.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+
+.add-video-logo {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
     background-image: url(../img/camera-plus.png);
     background-size: cover;
-    border: 1px solid black;
 }
+
+
+.profile-pic-logo {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-image: url(../img/pp.png);
+    background-size: cover;
+}
+
+
+
+
+
+
+
 
 
 
@@ -58,8 +74,26 @@ a:hover{
 /* Actualités (index.php) */
 .actu {                                
     margin-top: 10vh;
-    background-color: #ECECEC;;
+    background-color: #ECECEC;
 }
+
+.blog {                                 /* Actualités (index.php) */
+    max-height: 120vh;
+    overflow: auto;
+    background-color: #ECECE9;
+    border-radius: 5%;
+}
+
+.title-actus {
+    text-transform: uppercase;
+}
+
+.post {
+    background-color: white;
+}
+
+
+
 
 /* RIGHT DIV */
 
@@ -70,15 +104,25 @@ a:hover{
 }
 
 .div-series {
-
     margin-top: 5vh;
+    background-color: white;
+    border-radius: 8%;
 }
-/*.block-series {
-    height: 15vh;
-    width: 100px;
-    margin: 50px auto;
-    margin-bottom: 80%;
-}*/
+
+
+.block-series{
+    height: 150px;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 8%;
+}
+
+hr {
+    background-color: #FFEC62;
+    border-width: 3px;
+    margin: 2px auto;
+}
+
 
 
  /* Messages de résultat d'envoi de données (contact.php) */
@@ -104,33 +148,12 @@ a:hover{
 .footer {
     background-color: #ECECEC; 
     margin-top: 5vh;
+    padding-bottom: 5px;
 }
 
 .footer-links {
     list-style-type: circle;
-
 }
-.footer {
-    background-color: #9B9B9B; 
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer {
-    background-image: url('../img/2252.jpg');
-}
-
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 2%;
-    background-color: red;
-    color: white;
-    text-align: center;
-  }
 
 /* PAGE PROFIL */
 
@@ -139,7 +162,7 @@ a:hover{
     width: 10%;
 }
 
-.bio  {
+.bio {
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -149,10 +172,7 @@ a:hover{
 }
 
 
-.block-series{
-    height: 100px;
-    margin: 10% 0;
-}
+
 
 .facebook {
     background-image: url("../img/facebook.png");
@@ -176,9 +196,19 @@ a:hover{
     /* border: 1px solid black; */
 }
 
-/* BLOG */
+/* CONTACT */
 
-.blog{
-    max-height: 100vh;
-    overflow: scroll;
+
+
+.submit {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background-color: #5E5CBA;
 }
+
+legend {
+    font-size: 18px;
+}
+

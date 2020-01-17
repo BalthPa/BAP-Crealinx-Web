@@ -1,10 +1,11 @@
 <?php include ('../inc/header.inc.php') ?>
 <div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-9 bg-primary text-center pl-5 pr-5 blog">
-            <div class="col-sm-12  text-center p-5">
-                <h3>Fil d'actualité</h3>
-                <p>N'oublie pas de te connecter</p>
+    <div class="d-flex justify-content-around">
+        <div class="blog col-sm-7 text-center mt-5 pl-5 pr-5 shadow">
+
+            <div class="title-actus col-sm-12 text-center p-5">
+                <h3> Fil d'actualités </h3>
+                <p> N'oubliez pas de vous connecter. </p>
             </div>
 
             <form method='post'>
@@ -42,7 +43,7 @@
                 while($data=$req->fetch()){
             ?>
 
-            <div class="col-sm-12 bg-warning mt-5 mb-5">
+            <div class="post col-sm-12 mt-5 mb-5 rounded-lg">
                 <div class="row">
                     <a href='profileShow.php?creator=<?= $data['username']?>' class='col-sm-12'>
                     <div class="col-sm-12 text-left">
@@ -63,15 +64,18 @@
 
         <div class="right-side col-sm-3">
 
-            <div class="div-series col-sm-12 btn-group-vertical" role="group" aria-label="Basic example">
-                <a class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries suivies </button></a>
-                <a href='watchLater.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Séries à regarder plus tard </button></a>
-                <a href='mesVideos.php' class='col-sm-12'><button type="button" class="block-series btn btn-secondary col-sm-12"> Mes vidéos </button></a>
-            </div>          
+            <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+                <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
+                <hr class="col-sm-6" />
+                <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+            </div>   
+
+            <?php include ('../inc/footer.inc.php') ?>       
+
         </div>
 
     </div>
 </div>
 
-<?php include ('../inc/footer.inc.php') ?>
+
 
