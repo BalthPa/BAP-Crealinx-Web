@@ -3,27 +3,24 @@
 <div class='container-fluid'>
     <div class="row">
         <div class="col-sm-9 bg-primary text-center p-5">
-        <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
+            <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
             <div class="col-sm-12 d-flex flex-wrap">
-            <?php 
+                <?php 
 
-            include ('../inc/connection.inc.php');
+                include ('../inc/connection.inc.php');
 
-            $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
-            $req->execute(array($_GET['categorie']));
-            while($data=$req->fetch()){
+                $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
+                $req->execute(array($_GET['categorie']));
+                while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
-            ?>
-        <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-        <div class='video m-1'>
-        <h4><?php echo $data['title']?></h4>    
+                ?>
+                <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
+                    <div class='video m-1'>
+                <h4><?php echo $data['title']?></h4>    
         <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         </a>
-
-        <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>'>Ajouter</a>
-
 
 
 
@@ -32,10 +29,6 @@
 $req->closeCursor(); 
 ?>
 
-<?php
-    $idVideo = $_GET['video'];
-    $test = 'username_' . $_SESSION['id'];
-    $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo") ?>
         </div>  
         </div>
 

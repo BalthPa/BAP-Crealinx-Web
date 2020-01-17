@@ -14,6 +14,7 @@ html {
 }
 
 /* NAV */
+
 ul{
     width: 100%;
 }
@@ -49,16 +50,13 @@ a:hover{
 
 
 
-
-
-
 .logo {
     font-size: 20px;
 }
 
 
-
-.actu {                                 /* Actualités (index.php) */
+/* Actualités (index.php) */
+.actu {                                
     margin-top: 10vh;
     background-color: #ECECEC;;
 }
@@ -66,8 +64,8 @@ a:hover{
 /* RIGHT DIV */
 
 
-
-.right-side {                   /* (Sections 3 boutons de droite) */
+ /* (Sections 3 boutons de droite) */
+.right-side {                  
     margin-top: 10vh;
 }
 
@@ -83,15 +81,21 @@ a:hover{
 }*/
 
 
+ /* Messages de résultat d'envoi de données (contact.php) */
 
-
-.message-error {                                /* Messages de résultat d'envoi de données (contact.php) */
+.message-error {                               
     background-color: rgb(255, 200, 200);
 }
 .message-success {
     background-color: rgb(123, 255, 149);
 }
 
+
+/* PROFIL */
+
+.post_profil{
+    overflow: scroll;
+}
 
 
 /* FOOTER */

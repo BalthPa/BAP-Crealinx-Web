@@ -45,7 +45,7 @@
 
 
             <?php
-                $req = $bdd->prepare("SELECT * FROM video WHERE creator = ?");
+                $req = $bdd->prepare("SELECT * FROM video WHERE creator = ? ORDER BY id DESC");
                 $req->execute(array($_GET['creator']));
                 while($data=$req->fetch()){
                     $yt_id = substr($data['url'], -11);

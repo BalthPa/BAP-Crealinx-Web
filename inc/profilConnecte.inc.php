@@ -1,8 +1,10 @@
 <div class='container-fluid'>
     <div class="row">
 <?php
+    // AFFICHAGE PROFIL
     include('../inc/connection.inc.php');
-    $req = $bdd->query("SELECT * FROM accounts WHERE id = '".$_SESSION['id']."'");
+    $idUser = $_SESSION['id'];
+    $req = $bdd->query("SELECT * FROM accounts WHERE id = $idUser");
     
     while($data = $req->fetch()){
         ?>
@@ -36,7 +38,7 @@
             </div>
 
             <div class="col-sm-12 text-center p-3">
-                <h1>Mes réalisations</h1>
+                <h2>Mes réalisations</h2>
                 <div class="col-sm-12 d-flex flex-wrap">
 
             <?php
@@ -45,27 +47,57 @@
 ?>
 
 
-            <?php
-                $req = $bdd->query("SELECT * FROM video WHERE id_creator = '".$_SESSION['id']."'");
-                while($data=$req->fetch()){
+                <?php
+                    $idUser = $_SESSION['id'];
+                    $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idUser ORDER BY id DESC");
+                    while($data=$req->fetch()){
                     $yt_id = substr($data['url'], -11);
-                ?>
+                    ?>
 
-            <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-                <div class='video m-1'>
-                    <h4><?php echo $data['title']?></h4>    
-                    <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </a>
-    
-    
-    <?php
-    }
-    $req->closeCursor(); 
-    ?>
-        </div>
-        </div>
+                    <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
+                        <div class='video m-1'>
+                            <h4><?php echo $data['title']?></h4>    
+                            <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </a>
+     
+                <?php
+                    }
+                $req->closeCursor(); 
+                ?>
+                </div>  
+            </div>
+
+            <div class="col-sm-12 text-center mb-4">
+                <h2>Mes post sur le blog</h2>
+                    <div class='col-sm-12 d-flex flex-wrap'>
+                    
+                    <?php
+                    $idUser = $_SESSION['id'];
+                    $show = $bdd->query("SELECT * FROM blog WHERE id_user = $idUser");
+                    while($data=$show->fetch()){
+                    ?>
+
+                        <div class='col-sm-4 border border-warning post_profil'>
+                            <a href='profil.php?post=<?= $data['id'] ?>' class='text-danger'>Supprimer</a>
+                            <p><?= $data['text']?></p>
+                        </div>        
+
+                    <?php
+                    }
+                    $show->closeCursor();
+                    ?>
+                    
+                    </div>    
+            </div> 
+            
+            <?php
+                $idUser = $_SESSION['id'];
+                $delete = $bdd->prepare("DELETE FROM blog WHERE id_user = $idUser AND id = ? ");
+                $delete->execute(array($_GET['post']));
+            ?>
+
         </div>
 
 

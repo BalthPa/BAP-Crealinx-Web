@@ -25,9 +25,6 @@
         <h4>Synopsis</h4>
         <p class='text-center'> <?= $data['synopsis'] ?></p>
 
-        <a href="lecteur.php?creator=<?php echo $_GET['creator'] ?>&video=<?php echo $data['id'] ?>">Ajouter</a>
-
-
         </div>            
 
         <?php
@@ -35,12 +32,6 @@
         $req->closeCursor(); 
         ?>
 
-
-    <?php 
-    $idVideo = $_GET['video'];
-    $test = 'username_' . $_SESSION['id'];
-    $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo")
-    ?>
 
         </div>
 
