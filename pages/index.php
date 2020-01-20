@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <textarea type="text" class="form-control" name='content' placeholder="Post"></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-dark"> Envoyer </button>
                 <div class="dropdown-divider"></div>
             </form>
 
@@ -65,9 +65,11 @@
         <div class="right-side col-sm-3">
 
             <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+                <div class="popcorn-solo"></div>
                 <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
                 <hr class="col-sm-6" />
                 <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+                <div class="popcorn-multiple-trois"></div>
             </div>   
 
             <?php include ('../inc/footer.inc.php') ?>       

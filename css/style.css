@@ -1,14 +1,14 @@
 * {
-    font-family: "gilroy-light";
+    font-family: 'gilroy-light';
 }
 
 @font-face {
     font-family: "gilroy-extrabold";
-    src: url("/fonts/GILROY-EXTRABOLD.otf") 
+    src: url("../fonts/GILROY-EXTRABOLD.otf") 
 }
 @font-face {
     font-family: "gilroy-light";
-    src: url("/fonts/GILROY-LIGHT.otf") 
+    src: url("../fonts/GILROY-LIGHT.otf") 
 }
 
 
@@ -21,12 +21,14 @@ html {
     min-height: 100%;
 }
 
-/* .col-sm-8{
-    height: 100px;
+body {
+    background-image: url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.col-sm-4{
-    height: 100px;
-} */
+
 
 
 
@@ -35,6 +37,10 @@ html {
 .navbar {
     background-color: #FFEC62;
     height: 70px;
+}
+
+.navbar-brand {
+    padding: 0 20px;
 }
 
 .nav-item {
@@ -46,7 +52,6 @@ html {
     background-size: cover;
     width: 60px;
     height: 57px;
-    box-sizing: border-box;
 }
 
 .form-inline {
@@ -59,130 +64,89 @@ html {
 
 .dropdown-menu {
     background-color: #5d62d1;
-    border: 1px solid red;
 }
 
-
-
-
+.dropdown-item {
+    font-family: 'gilroy-extrabold';
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+}
 
 .category-logo {
     background-image: url(../img/nine-dots.png);
     background-size: cover;
-    width: 45px;
-    height: 45px;
-    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
 }
-
 
 .add-video-logo {
-    width: 48px;
-    height: 30px;
-    box-sizing: border-box;
+    width: 42px;
+    height: 27px;
     margin: 0 auto;
     background-image: url(../img/camera-plus.png);
-    background-size: cover;
+    background-size: contain;
 }
-
 
 .profile-pic-logo {
-    width: 45px;
-    height: 45px;
-    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
     background-image: url(../img/pp.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
 }
 
 
 
+/* INDEX.PHP */
 
 
-
-
-
-
-
-.logo {
-    font-size: 20px;
-}
-
-
-/* Actualités (index.php) */
 .actu {                                
     margin-top: 10vh;
     background-color: #ECECEC;
 }
 h3 {
-    font-family: "sofia-pro-bold";
+    font-family: 'gilroy-extrabold';
     text-transform: uppercase;
 }
 
-.blog {                                 /* Actualités (index.php) */
+.blog {                                 /* Dashboard actualités */
     max-height: 120vh;
     overflow: auto;
     background-color: #ECECE9;
     border-radius: 5%;
 }
 
-
 .post {
     background-color: white;
 }
-
 
 ::-webkit-scrollbar {
     width: 15px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #c6c6c6; 
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: rgb(155, 155, 155); 
     border-radius: 10px;
     transition: 0.5s;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: rgb(128, 128, 128); 
-  }
-
-
-
-
-/* RIGHT DIV */
-
-
- /* (Sections 3 boutons de droite) */
-.right-side {                  
-    margin-top: 10vh;
-}
-
-.div-series {
-    margin-top: 5vh;
-    background-color: white;
-    border-radius: 8%;
 }
 
 
-.block-series{
-    height: 150px;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 8%;
-}
 
-hr {
-    background-color: #FFEC62;
-    border-width: 3px;
-    margin: 2px auto;
-}
+
+
+
+
 
 
 
@@ -202,19 +166,6 @@ hr {
     overflow: scroll;
 }
 
-
-/* FOOTER */
-
-
-.footer {
-    background-color: #ECECEC; 
-    margin-top: 5vh;
-    padding-bottom: 5px;
-}
-
-.footer-links {
-    list-style-type: circle;
-}
 
 /* PAGE PROFIL */
 
@@ -273,3 +224,68 @@ legend {
     font-size: 18px;
 }
 
+
+
+
+/* Boutons de droite */
+
+.right-side {                  
+    margin-top: 10vh;
+}
+
+.div-series {
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 8%;  
+}
+
+.block-series{
+    height: 150px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'gilroy-extrabold';
+    border-radius: 8%;
+}
+
+.block-series:hover {
+    color: rgb(88, 88, 88);
+}
+
+hr {
+    background-color: #FFEC62;
+    border-width: 3px;
+    margin: 2px auto;
+}
+
+/* .popcorn-solo {                                    LES POP-CORNS PAS ENCORE INTEGRES
+    background-image: url('../img/popcorn-solo.png');
+    background-size: cover;
+    width: 50px;
+    height: 46px;
+}
+
+.popcorn-multiple-trois {
+    background-image: url('../img/popcorn-multiple-trois.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+} */
+
+
+
+/* FOOTER */
+
+
+.footer {
+    background-color: #ECECEC; 
+    margin-top: 5vh;
+    padding: 10px;
+}
+
+.footer-links {
+    list-style-type: circle;
+}
+
+.footer-links a {
+    text-decoration: none;
+}

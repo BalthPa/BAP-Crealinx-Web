@@ -1,7 +1,7 @@
 <div class="footer col-sm-12">
 
     <div class="footer-parts">
-        <h3 class="text-center"> Popcorn Series </h3>
+        <h4 class="text-center"> Popcorn Series </h3>
         <p> Plateforme communautaire de web-séries </p>
     </div>
     <div class="footer-parts mt-3">
@@ -10,7 +10,7 @@
                 <li> <a href="index.php">Accueil</a> </li>
                 <li> <a href="#">À propos</a> </li>
                 <li> <a href="profil.php">Profil</a> </li>
-                <li> <a href="profil.php">Ajouter une vidéo</a> </li>
+                <li> <a href="ajoutVideo.php">Ajouter une vidéo</a> </li>
             </ul>
     </div>
     <div class="footer-parts mt-3">
