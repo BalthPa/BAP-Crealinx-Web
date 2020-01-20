@@ -1,5 +1,5 @@
 * {
-    font-family: "sofia-pro-medium";
+    font-family: "gilroy-light";
 }
 
 @font-face {
@@ -10,14 +10,8 @@
     font-family: "gilroy-light";
     src: url("/fonts/GILROY-LIGHT.otf") 
 }
-@font-face {
-    font-family: "sofia-pro-bold";
-    src: url("/fonts/SOFIA-PRO-BOLD.ttf") 
-}
-@font-face {
-    font-family: "sofia-pro-medium";
-    src: url("/fonts/SOFIA-PRO-MEDIUM.ttf") 
-}
+
+
 /* ALL */
 
 html {
@@ -36,8 +30,6 @@ html {
 
 
 
-
-
 /* NAV */
 
 .navbar {
@@ -45,14 +37,34 @@ html {
     height: 70px;
 }
 
+.nav-item {
+    padding: 0 30px;
+}
 
 .logo {
     background-image: url(../img/logo-bg-white.png);
     background-size: cover;
     width: 60px;
-    height: 56px;
+    height: 57px;
     box-sizing: border-box;
 }
+
+.form-inline {
+    padding: 0 15vw;
+}
+
+.up {
+    height: 30px;
+}
+
+.dropdown-menu {
+    background-color: #5d62d1;
+    border: 1px solid red;
+}
+
+
+
+
 
 .category-logo {
     background-image: url(../img/nine-dots.png);
@@ -64,9 +76,10 @@ html {
 
 
 .add-video-logo {
-    width: 68px;
-    height: 45px;
+    width: 48px;
+    height: 30px;
     box-sizing: border-box;
+    margin: 0 auto;
     background-image: url(../img/camera-plus.png);
     background-size: cover;
 }
@@ -76,6 +89,7 @@ html {
     width: 45px;
     height: 45px;
     box-sizing: border-box;
+    margin: 0 auto;
     background-image: url(../img/pp.png);
     background-size: cover;
 }

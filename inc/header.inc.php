@@ -14,9 +14,9 @@
 
 
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg d-flex p-0">
 
-  <a class="navbar-brand border border-danger" href="index.php">
+  <a class="nav-item mr-auto border border-danger" href="index.php">
   <div class="logo"></div>
   </a>
 
@@ -26,15 +26,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Recherche" aria-label="Search">
+    <form class="form-inline flex-fill border border-danger">
+      <input class="form-control up flex-fill rounded-pill" type="search" placeholder="Recherche" aria-label="Search">
     </form>
 
   
-        <li class="nav-item dropdown list-unstyled">
+        <li class="nav-item dropdown ml-auto list-unstyled border border-danger">
           
 
-          <a class="dropdown border border-danger" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="category-logo"></div>
           </a>
 
@@ -54,13 +54,13 @@
         </li>
 
      
-        <a class="border border-danger" href="#">
+        <a class="nav-item ml-auto border border-danger" href="#">
           <div class="add-video-logo"></div>
         </a>
     
 
       
-        <a class="border border-danger" href="#">
+        <a class="nav-item ml-auto border  border-danger" href="profil.php">
           <div class="profile-pic-logo"></div>
         </a>
       
