@@ -43,9 +43,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-<div class="container contact col-sm-8 mt-5 mb-5 p-5 shadow">
+<div class="container contact col-sm-8 mt-5 mb-5 p-5 shadow-lg">
 
-    <h1 class="text-center"> Contact </h1>
+    <h3 class="text-center"> Contact </h3>
         <form class="col-sm-12 m-0 p-0" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
             
             <fieldset class="mt-4">

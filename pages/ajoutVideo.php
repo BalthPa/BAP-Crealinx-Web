@@ -1,9 +1,9 @@
 <?php include('../inc/header.inc.php');
 
-if(!empty($_SESSION['username']) == FALSE){
+if(!empty($_SESSION['username']) == FALSE) {
     include ('../inc/profilDeconnecte.inc.php');
 }
-else{
+else {
     include('../inc/ajoutVConnecte.inc.php');
 }
 

@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <textarea type="text" class="form-control" name='content' placeholder="Post"></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark"> Envoyer </button>
+                <button type="submit" class="btn submit-post"> Envoyer </button>
                 <div class="dropdown-divider"></div>
             </form>
 
