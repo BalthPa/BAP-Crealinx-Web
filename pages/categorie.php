@@ -1,9 +1,10 @@
 <?php include ('../inc/header.inc.php') ?>
 
 <div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-9 bg-primary text-center p-5">
-        <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
+    <div class="d-flex justify-content-around">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
+
+            <h3 class="text-center p-5"><?php echo $_GET['categorie'] ?></h1>
             <div class="col-sm-12 d-flex flex-wrap">
             <?php 
 
@@ -27,10 +28,7 @@
 
 
 
-<?php
-}
-$req->closeCursor(); 
-?>
+        <div class="right-side col-sm-3">
 
 <?php
     $idVideo = $_GET['video'];
@@ -38,13 +36,12 @@ $req->closeCursor();
     $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo") ?>
         </div>  
         </div>
-
-        <div class="right-side col-sm-3">
-
             <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+                <div class="popcorn-solo"></div>
                 <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
                 <hr class="col-sm-6" />
                 <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+                <div class="popcorn-multiple-trois"></div>
             </div>   
 
             <?php include ('../inc/footer.inc.php') ?>       

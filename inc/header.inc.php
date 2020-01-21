@@ -14,57 +14,49 @@
 
 
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg d-flex p-0">
 
-  <a class="navbar-brand border border-danger" href="index.php">
+  <a class="navbar-brand mr-auto" href="index.php">
   <div class="logo"></div>
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Recherche" aria-label="Search">
+    <form class="form-inline flex-fill">
+      <input class="form-control up flex-fill rounded-pill" type="search" placeholder="Recherche" aria-label="Search">
     </form>
 
   
-        <li class="nav-item dropdown list-unstyled">
+        <div class="nav-item dropdown ml-auto list-unstyled">
           
-
-          <a class="dropdown border border-danger" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="category-logo"></div>
           </a>
 
-
-
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="categorie.php?categorie=Action"> Action </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="categorie.php?categorie=Comédie"> Comédie </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Horreur </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="categorie.php?categorie=Thriller"> Thriller </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="categorie.php?categorie=Western"> Western </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="categorie.php?categorie=Action"> Action </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="categorie.php?categorie=Comédie"> Comédie </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="categorie.php?categorie=Horreur"> Horreur </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="categorie.php?categorie=Thriller"> Thriller </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="categorie.php?categorie=Western"> Western </a>
           </div>
-        </li>
+          
+        </div>
 
-     
-        <a class="border border-danger" href="../pages/ajoutVideo.php">
-          <div class="add-video-logo"></div>
-        </a>
+    <a class="nav-item ml-auto" href="../pages/ajoutVideo.php"> <div class="add-video-logo"></div></a>
     
-
+    <a class="nav-item ml-auto" href="../pages/profil.php"><div class="profile-pic-logo"></div></a>
       
-        <a class="border border-danger" href="../pages/profil.php">
-          <div class="profile-pic-logo"></div>
-        </a>
-      
-    </ul>
+   
   </div>
 </nav>
 
