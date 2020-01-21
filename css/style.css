@@ -1,4 +1,4 @@
-* {
+*{
     font-family: "sofia-pro-medium";
 }
 
@@ -18,6 +18,7 @@
     font-family: "sofia-pro-medium";
     src: url("/fonts/SOFIA-PRO-MEDIUM.ttf") 
 }
+
 /* ALL */
 
 html {
@@ -182,12 +183,6 @@ hr {
 }
 
 
-/* PROFIL */
-
-.post_profil{
-    overflow: scroll;
-}
-
 
 /* FOOTER */
 
@@ -216,6 +211,10 @@ hr {
 
 #mesRealisations {
     padding-bottom: 5%;
+}
+
+.post_profil{
+    overflow:scroll;
 }
 
 

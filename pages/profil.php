@@ -11,5 +11,4 @@ else {
     include('../inc/profilConnecte.inc.php');
 }
 
-include('../inc/footer.inc.php');
 ?>

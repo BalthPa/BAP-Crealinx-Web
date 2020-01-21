@@ -54,13 +54,13 @@
         </li>
 
      
-        <a class="border border-danger" href="#">
+        <a class="border border-danger" href="../pages/ajoutVideo.php">
           <div class="add-video-logo"></div>
         </a>
     
 
       
-        <a class="border border-danger" href="#">
+        <a class="border border-danger" href="../pages/profil.php">
           <div class="profile-pic-logo"></div>
         </a>
       

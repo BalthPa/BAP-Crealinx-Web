@@ -7,5 +7,4 @@ else{
     include('../inc/ajoutVConnecte.inc.php');
 }
 
-
-include('../inc/footer.inc.php') ?>
+?>
