@@ -3,7 +3,7 @@
 <?php
     // AFFICHAGE PROFIL
     include('../inc/connection.inc.php');
-    $idUser = $_SESSION['id'];
+    $idUser = $_SESSION['id'];          
     $req = $bdd->query("SELECT * FROM accounts WHERE id = $idUser");
     
     while($data = $req->fetch()){
@@ -45,6 +45,7 @@
 
 
                 <?php
+                // Affichage des vidéos de l'utilisateur
                     $idUser = $_SESSION['id'];
                     $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idUser ORDER BY id DESC");
                     while($data=$req->fetch()){
@@ -71,6 +72,7 @@
                     <div class='col-sm-12 d-flex flex-wrap'>
                     
                     <?php
+                    //Affichage Post du blog et possibilité de le supprimer
                     $idUser = $_SESSION['id'];
                     $show = $bdd->query("SELECT * FROM blog WHERE id_user = $idUser");
                     while($data=$show->fetch()){
@@ -90,6 +92,7 @@
             </div> 
             
             <?php
+                //Suppression d'un post du blog
                 $idUser = $_SESSION['id'];
                 $delete = $bdd->prepare("DELETE FROM blog WHERE id_user = $idUser AND id = ? ");
                 $delete->execute(array($_GET['post']));

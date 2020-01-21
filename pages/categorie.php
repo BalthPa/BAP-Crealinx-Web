@@ -9,15 +9,16 @@
             <?php 
                 include ('../inc/connection.inc.php');
 
-                $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
+                $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?'); // Montre les vidéos en fonction de la catégorie chosit, récupération en GET
                 $req->execute(array($_GET['categorie']));
                 while($data=$req->fetch()){
-                    $yt_id = substr($data['url'], -11);
+                    $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
                 <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
                     <div class='video m-1'>
                         <h4><?php echo $data['title']?></h4>    
-                        <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>' class='link-watchlater'><h6>Regarder plus tard</h6></a>
+                        <!-- Si un utilisateur clique sur le lien -> ajout de données en GET -->
+                        <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>' class='link-watchlater'><h6>Regarder plus tard</h6></a> 
                         <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -32,6 +33,7 @@
 
 
         <?php
+        // On récupére l'id de la vidéo grâce au GET et on change la valeur de NULL à 1
         $idVideo = $_GET['video'];
         $test = 'username_' . $_SESSION['id'];
         $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo") ?>

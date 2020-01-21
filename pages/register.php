@@ -2,8 +2,10 @@
 <?php
 include('../inc/connection.inc.php');
 
-//$password = password_hash('$_POST["password"]', PASSWORD_DEFAULT);
+// On envoie les données du nouveau compte, vers la BDD
 $passwordForm = htmlspecialchars($_POST['password']);
+
+// On hash le mot de passe pour qu'il ne soit pas en clair dans la BDD
 $password = md5($passwordForm);
 
 $req= $bdd->prepare('INSERT INTO accounts (username,password,mail,role) VALUES (:username, :password, :mail, :role)');
@@ -17,6 +19,8 @@ $req->execute(array(
 
 
 ?>
+
+<!-- On affiche une page de connection -->
 <div class='container-fluid mb-5'>
     <div class="d-flex justify-content-around">
         <div class="category-vd col-sm-7 text-center mt-5 shadow">

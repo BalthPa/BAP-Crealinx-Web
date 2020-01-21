@@ -9,11 +9,12 @@
 
 
             include ('../inc/connection.inc.php');
+            // On récupère l'id de l'utilisateur pour afficher seulement ses vidéos
             $idCreator = $_SESSION['id'];
             $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator ORDER BY id DESC");
 
             while($data=$req->fetch()){
-                $yt_id = substr($data['url'], -11);
+                $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
         <a href="lecteur.php?creator=<?= $data['id'] ?>" class='col-sm-12 maVideo'>
             <div class='video m-3 d-flex justify-space-around'>    

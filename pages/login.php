@@ -2,16 +2,18 @@
 
 <?php
 
+//On vérifie qu'il n'y a pas de balise dans les champs repmlis
+
 $passwordForm = htmlspecialchars($_POST['password']);
 $usernameForm = htmlspecialchars($_POST['username']);
+
+// On hash le mot de passe pour le faire matcher avec celui dans la BDD
 $passwordTest = md5($passwordForm);
 
-//echo $passwordForm . $usernameForm ;
 
 include('../inc/connection.inc.php');
 $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
-//$req->execute(array($usernameForm));
-//$req->execute(array('name' => $usernameForm));
+
 $data = $req->fetch();
     $passwordBdd = $data['password'];
     $usernameBdd = $data['username'];
@@ -19,16 +21,14 @@ $data = $req->fetch();
     //echo $passwordBdd . '<br>';
 
  if($passwordBdd === $passwordTest){
+
+    //Si les infos sont bonnes, on démarre une session, on enregistre les infos dans cette variable pour pouvoir afficher toutes les fonctionnalités
         session_start();
 
         $_SESSION['username'] = $usernameBdd;
         $_SESSION['id'] = $idBdd;
-        //$_SESSION['mail'] = $data['mail'];
-        //$_SESSION['id'] = $data['id'];
 
         include('../inc/profilConnecte.inc.php');
-
-
 
         
     } else if ($passwordBdd !== $passwordTest) {

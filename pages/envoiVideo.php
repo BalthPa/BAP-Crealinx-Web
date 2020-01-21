@@ -18,6 +18,7 @@
     ));
 
 
+	// Ajout de la vidéo dans la table Regarder plus tard
 	$add = $bdd->prepare('INSERT INTO watchlater(title_video, url_video, synopsis_video) VALUES (:title_video, :url_video, :synopsis_video)');
 	$add->execute(array(
 		'title_video' => $_POST['title'],

@@ -8,13 +8,12 @@
 
             include ('../inc/connection.inc.php');
 
+            // Récupération de l'id de la vidéo en méthode GET
             $id_url = $_GET['creator'];
             $req = $bdd->query("SELECT * FROM video WHERE id=$id_url");
-            
-            //$req->execute(array($_GET['creator']));
 
             while($data =$req->fetch()){
-                $yt_id = substr($data['url'], -11);
+                $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
         ?>
 
         <div class='video col-sm-12 text-center'>  

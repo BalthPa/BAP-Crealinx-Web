@@ -7,7 +7,6 @@ if(!empty($_SESSION['username']) == FALSE){
     include('../inc/profilDeconnecte.inc.php');
 }
 else {
-    //echo 'Bienvenue' . $_SESSION['username'];
     include('../inc/profilConnecte.inc.php');
 }
 

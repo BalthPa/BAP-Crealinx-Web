@@ -10,24 +10,22 @@ $passwordTest = md5($passwordForm);
 
 include('../inc/connection.inc.php');
 $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
-//$req->execute(array($usernameForm));
-//$req->execute(array('name' => $usernameForm));
+
 $data = $req->fetch();
     $passwordBdd = $data['password'];
     $usernameBdd = $data['username'];
     $idBdd = $data['id'];
 
     $newUser = 'username_' . $idBdd;
-    //echo $passwordBdd . '<br>';
 
  if($passwordBdd === $passwordTest){
         session_start();
 
         $_SESSION['username'] = $usernameBdd;
         $_SESSION['id'] = $idBdd;
-        //$_SESSION['mail'] = $data['mail'];
-        //$_SESSION['id'] = $data['id'];
+        
 
+        // On rajoute une colonne dans la table a regarder plus tards
         $add = $bdd->query("ALTER TABLE watchlater ADD $newUser INT(11)");
 
         include('../inc/profilConnecte.inc.php');

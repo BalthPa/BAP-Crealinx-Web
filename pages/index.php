@@ -10,6 +10,7 @@
 
             <form method='post'>
                 <div class="form-group">
+                    <!-- On récupère l'id et le pseudo avec un input hidden pour vérifier que la personne est connecté et pour envoyer les données dans la table -->
                     <input type="hidden" name='id_user' value='<?= $_SESSION['id'] ?>'>
                 </div>
                 <div class="form-group">

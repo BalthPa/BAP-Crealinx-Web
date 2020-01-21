@@ -5,11 +5,12 @@
             <div class="col-sm-12 d-flex flex-wrap">
         
                 <?php 
+                // Affichage des vidéos qu'on a mis 'A regarder plus tard'
                 include('../inc/connection.inc.php');
                 $idUser = 'username_' . $_SESSION['id'];
-                $req = $bdd->query("SELECT * FROM watchlater WHERE $idUser = 1 ");
+                $req = $bdd->query("SELECT * FROM watchlater WHERE $idUser = 1 "); // Prend les vidéos qui ont une valeur de 1
                 while($data = $req->fetch()){
-                    $yt_id = substr($data['url_video'], -11)
+                    $yt_id = substr($data['url_video'], -11) // On sélectionne juste l'id de la vidéo, on coupe l'URl
                 ?>
 
                 <a href="lecteur.php?creator=<?= $data['id_video'] ?>" class='col-sm-12 videoSuivie'>

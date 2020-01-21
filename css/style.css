@@ -173,6 +173,7 @@ h3 {
 
 .post_profil{
     overflow: scroll;
+    height: 30vh !important ;
 }
 
 

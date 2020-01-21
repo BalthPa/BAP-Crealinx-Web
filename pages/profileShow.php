@@ -5,6 +5,7 @@
 
 <?php
     include('../inc/connection.inc.php');
+    // On récupère le pseudo de l'utilisateur en méthode GET pour afficher les données correspondantes
     $req = $bdd->prepare('SELECT * FROM accounts WHERE username = ?');
     $req->execute(array($_GET['creator']));
     
