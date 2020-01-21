@@ -52,9 +52,9 @@
           
         </div>
 
-    <a class="nav-item ml-auto" href="../pages/ajoutVideo.php"> <div class="add-video-logo"></div></a>
+    <a class="nav-item ml-auto" href="ajoutVideo.php"> <div class="add-video-logo"></div></a>
     
-    <a class="nav-item ml-auto" href="../pages/profil.php"><div class="profile-pic-logo"></div></a>
+    <a class="nav-item ml-auto" href="profil.php"><div class="profile-pic-logo"></div></a>
       
    
   </div>

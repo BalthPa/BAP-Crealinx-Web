@@ -1,5 +1,5 @@
 <?php include ('../inc/header.inc.php') ?>
-<div class='container-fluid'>
+<div class='container-fluid mb-5'>
     <div class="d-flex justify-content-around">
         <div class="blog col-sm-7 text-center mt-5 pl-5 pr-5 shadow">
 

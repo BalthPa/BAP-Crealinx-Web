@@ -10,5 +10,4 @@ else {
     include('../inc/watchLaterConnecte.inc.php');
 }
 
-include('../inc/footer.inc.php');
 ?>

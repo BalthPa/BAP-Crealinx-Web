@@ -1,6 +1,6 @@
-<div class='container-fluid'>
-    <div class="row">
-        <div class="actu col-sm-9 border border-info text-center p-5 mt-2">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
             <h1>Créer son compte</h1>
 
             <form method='post' action='register.php'> 

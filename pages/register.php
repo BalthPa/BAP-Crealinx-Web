@@ -17,9 +17,9 @@ $req->execute(array(
 
 
 ?>
-<div class='container-fluid'>
-    <div class="row">
-        <div class="actu col-sm-9 border border-info text-center p-5 mt-2">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
             <h1 class='text-center'>Profil Crée</h1>
 
             <h2>Se connecter</h2>
@@ -38,8 +38,21 @@ $req->execute(array(
 
             </form>
 
+
+
         </div>
+
+        <div class="right-side col-sm-3">
+
+        <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+            <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
+            <hr class="col-sm-6" />
+            <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+        </div>   
+
+        <?php include ('../inc/footer.inc.php') ?>       
+
+    </div>
+        
     </div>
 </div>  
-
-<?php include ('../inc/footer.inc.php') ?>

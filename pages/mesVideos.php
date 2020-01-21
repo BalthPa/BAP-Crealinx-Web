@@ -1,8 +1,8 @@
 <?php include ('../inc/header.inc.php') ?>
 
-<div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-9 bg-primary text-center">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
+        <div class="blog col-sm-7 text-center mt-5 pl-5 pr-5 shadow">
         <h1 class="text-center">Mes vidéos</h1>
             <div class="col-sm-12 d-flex flex-wrap">
             <?php 

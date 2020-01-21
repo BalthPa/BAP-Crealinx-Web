@@ -28,6 +28,14 @@ body {
     background-size: cover;
 }
 
+.col-sm-12 a{
+    color: black ;
+}
+
+.col-sm-12 a:hover{
+    color: black ;
+    text-decoration: none;
+}
 
 
 
@@ -151,11 +159,6 @@ h3 {
     background-color: #ECECE9;
     border-radius: 5%;
 }
-
-
-
-
-
 
 
 

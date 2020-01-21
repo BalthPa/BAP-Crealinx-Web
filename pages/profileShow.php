@@ -1,7 +1,7 @@
 <?php include('../inc/header.inc.php') ?>
 
-<div class='container-fluid'>
-    <div class="row">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
 
 <?php
     include('../inc/connection.inc.php');
@@ -10,7 +10,7 @@
     
     while($data = $req->fetch()){
         ?>
-        <div class="actu col-sm-9 border border-info text-center pl-3 pr-3 mt-0">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
 
             <div class="col-sm-12 text-center p-3">
                 <h1 class='text-uppercase'><?= $data['username'] ?></h1>

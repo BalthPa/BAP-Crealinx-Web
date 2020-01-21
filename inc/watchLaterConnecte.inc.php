@@ -1,6 +1,6 @@
 <div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-9 bg-primary text-center pl-5 pr-5">
+    <div class="d-flex justify-content-around">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
             <h1>A regarder plus tard</h1>
             <div class="col-sm-12 d-flex flex-wrap">
         

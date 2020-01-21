@@ -42,5 +42,3 @@ $data = $req->fetch();
 
 ?>
 
-
-<?php include('../inc/footer.inc.php') ?>
