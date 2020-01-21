@@ -12,13 +12,16 @@
                     $yt_id = substr($data['url_video'], -11)
                 ?>
 
-                <a href='lecteur.php?creator=<?= $data['id_video'] ?>'>
-                    <div class='video m-1'>
-                        <h4><?php echo $data['title_video']?></h4>    
-                        <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
+                <a href="lecteur.php?creator=<?= $data['id_video'] ?>" class='col-sm-12 videoSuivie'>
+                    <div class='video m-3 d-flex justify-space-around'>    
+                        <iframe src="https://www.youtube.com/embed/<?= $yt_id?>" frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class='d-block'>
+                            <h4 class='ml-5'><?= $data['title_video']?></h4><br>
+                            <p class='text-left ml-4'><?= $data['synopsis_video'] ?></p>
+                        </div>    
                     </div>
-                </a>             
+                </a>          
 
             <?php
         }

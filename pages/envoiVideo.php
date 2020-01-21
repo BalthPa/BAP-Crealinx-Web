@@ -1,6 +1,5 @@
 
 <?php 
-	include('../inc/header.inc.php');
 	// Connexion à la base de données
 	include ("../inc/connection.inc.php");
 	
@@ -17,19 +16,19 @@
 	'id_creator' => $_POST['id_creator'],
 	'creator' => $_POST['creator']
     ));
-    
-	echo "envoi réussi";
 
 
-	$add = $bdd->prepare('INSERT INTO watchlater(title_video, url_video) VALUES (:title_video, :url_video)');
+	$add = $bdd->prepare('INSERT INTO watchlater(title_video, url_video, synopsis_video) VALUES (:title_video, :url_video, :synopsis_video)');
 	$add->execute(array(
 		'title_video' => $_POST['title'],
 		'url_video' => $_POST['url'],
+		'synopsis_video' => $_POST['synopsis']
 	))
 ?>
 
+<h2 class='col-sm-9 text-center'> Ajout réussi </h2>
 
-
-<a href="index.php"><button>Retour à l'accueil</button></a>
-
-<?php include('../inc/footer.inc.php') ?>
+<?php 
+include('mesVideos.php');
+include('../inc/footer.inc.php') 
+?>

@@ -10,16 +10,19 @@
 
             include ('../inc/connection.inc.php');
             $idCreator = $_SESSION['id'];
-            $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator");
+            $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator ORDER BY id DESC");
 
             while($data=$req->fetch()){
                 $yt_id = substr($data['url'], -11);
             ?>
-        <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-            <div class='video m-3'>
-                <h4><?php echo $data['title']?></h4>    
-                <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
+        <a href="lecteur.php?creator=<?= $data['id'] ?>" class='col-sm-12 maVideo'>
+            <div class='video m-3 d-flex justify-space-around'>    
+                <iframe src="https://www.youtube.com/embed/<?= $yt_id?>" frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class='d-block'>
+                <h4><?= $data['title']?></h4><br>
+                <p class='text-left ml-4'><?= $data['synopsis'] ?></p>
+                </div>    
             </div>
         </a>
 
