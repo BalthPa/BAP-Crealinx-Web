@@ -13,6 +13,7 @@
             $req = $bdd->query("SELECT * FROM video WHERE id=$id_url");
 
             while($data =$req->fetch()){
+                if ($data['source'] == 'Youtube'){
                 $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
         ?>
 
@@ -25,9 +26,26 @@
         <p class='text-center'> <?= $data['synopsis'] ?></p>
 
         </div>            
+            
+            <?php
+                }
+                else if ($data['source'] == 'Vimeo'){
+                    $vimeo_id = substr($data['url'], -9); // On sélectionne juste l'id de la vidéo, on coupe l'URl
+        ?>
+
+        <div class='video col-sm-12 text-center'>  
+            <h1><?php echo $data['title'] ?></h1>
+            <iframe src="https://player.vimeo.com/video/<?= $vimeo_id ?>" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <h3>Créateur : <a href='profileShow.php?creator=<?= $data['creator'] ?>'><?= $data['creator'] ?></a></h3>
+        <h4>Synopsis</h4>
+        <p class='text-center'> <?= $data['synopsis'] ?></p>
+
+        </div>    
+
 
         <?php
-        }
+                }
+    }
         $req->closeCursor(); 
         ?>
 

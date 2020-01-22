@@ -16,6 +16,15 @@
             </div>
 
             <div class="form-group">
+                <label for="exampleFormControlSelect2">Source de la video</label>
+                <select class="form-control" id="exampleFormControlSelect2" name="source">
+                    <option disabled selected>Choisissez une source</option>
+                    <option>Youtube</option>
+                    <option>Vimeo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="exampleFormControlSelect2">Catégorie</label>
                 <select class="form-control" id="exampleFormControlSelect2" name="categorie">
                     <option disabled selected>Choisissez</option>

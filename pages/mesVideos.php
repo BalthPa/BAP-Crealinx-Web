@@ -14,6 +14,8 @@
             $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator ORDER BY id DESC");
 
             while($data=$req->fetch()){
+                if ($data['source'] == 'Youtube'){
+
                 $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
         <a href="lecteur.php?creator=<?= $data['id'] ?>" class='col-sm-12 maVideo'>
@@ -29,6 +31,24 @@
 
 
 <?php
+            }
+            else if ($data['source'] == 'Vimeo'){
+                $vimeo_id = substr($data['url'], -9)
+                ?>
+            
+            <a href="lecteur.php?creator=<?= $data['id'] ?>" class='col-sm-12 maVideo'>
+                <div class='video m-3 d-flex justify-space-around'>    
+                <iframe src="https://player.vimeo.com/video/<?= $vimeo_id ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div class='d-block'>
+                <h4><?= $data['title']?></h4><br>
+                <p class='text-left ml-4'><?= $data['synopsis'] ?></p>
+                </div>    
+            </div>
+        </a>
+            
+        
+<?php
+}
 }
 $req->closeCursor(); 
 ?>

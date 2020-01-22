@@ -12,6 +12,7 @@
                 $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?'); // Montre les vidéos en fonction de la catégorie chosit, récupération en GET
                 $req->execute(array($_GET['categorie']));
                 while($data=$req->fetch()){
+                    if ($data['source'] == 'Youtube'){
                     $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
                 <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
@@ -25,8 +26,25 @@
                     </div>
                 </a>
 
+                <?php
+                    }
+                    else if ($data['source'] == 'Vimeo'){
+                    $vimeo_id = substr($data['url'], -9); // On sélectionne juste l'id de la vidéo, on coupe l'URl
+                ?>
+                    <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
+                         <div class='video m-1'>
+                             <h4><?php echo $data['title']?></h4>    
+                            <!-- Si un utilisateur clique sur le lien -> ajout de données en GET -->
+                            <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>' class='link-watchlater'><h6>Regarder plus tard</h6></a> 
+                            <iframe src="https://player.vimeo.com/video/<?= $vimeo_id ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            
+                                </div>
+                            </a>
+
+
                 <?php 
                 }
+            }
                 $req->closeCursor();  
                 ?>                    
 

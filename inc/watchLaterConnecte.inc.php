@@ -1,6 +1,6 @@
-<div class='container-fluid'>
+<div class='container-fluid mb-5'>
     <div class="d-flex justify-content-around">
-        <div class="category-vd col-sm-7 text-center mt-5 shadow">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow blog">
             <h1>A regarder plus tard</h1>
             <div class="col-sm-12 d-flex flex-wrap">
         
@@ -10,6 +10,7 @@
                 $idUser = 'username_' . $_SESSION['id'];
                 $req = $bdd->query("SELECT * FROM watchlater WHERE $idUser = 1 "); // Prend les vidéos qui ont une valeur de 1
                 while($data = $req->fetch()){
+                    if ($data['source_video'] == 'Youtube'){
                     $yt_id = substr($data['url_video'], -11) // On sélectionne juste l'id de la vidéo, on coupe l'URl
                 ?>
 
@@ -24,8 +25,27 @@
                     </div>
                 </a>          
 
+                <?php 
+                    }
+
+                    else if ($data['source_video'] == 'Vimeo'){
+                        $vimeo_id = substr($data['url_video'], -9) // On sélectionne juste l'id de la vidéo, on coupe l'URl
+                    ?>
+    
+                    <a href="lecteur.php?creator=<?= $data['id_video'] ?>" class='col-sm-12 videoSuivie'>
+                        <div class='video m-3 d-flex justify-space-around'>    
+                        <iframe src="https://player.vimeo.com/video/<?= $vimeo_id ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <div class='d-block'>
+                                <h4 class='ml-5'><?= $data['title_video']?></h4><br>
+                                <p class='text-left ml-4'><?= $data['synopsis_video'] ?></p>
+                            </div>    
+                        </div>
+                    </a>   
+
+                
+
             <?php
-        }
+        }}
         $req->closeCursor();
         ?>
 
