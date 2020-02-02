@@ -1,55 +1,56 @@
 <?php include ('../inc/header.inc.php') ?>
 
-<div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
-        <h1 class="text-center"><?php echo $_GET['categorie'] ?></h1>
-            <div class="row">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
+        <div class="category-vd col-sm-7 text-center mt-5 shadow">
+
+            <h1 class="text-center p-5"><?php echo $_GET['categorie'] ?></h1>
+            <div class="col-sm-12 d-flex flex-wrap">
             <?php 
+                include ('../inc/connection.inc.php');
 
-
-            include ('../inc/connection.inc.php');
-
-            $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?');
-            $req->execute(array($_GET['categorie']));
-            while($data=$req->fetch()){
-                $yt_id = substr($data['url'], -11);
+                $req = $bdd->prepare('SELECT * FROM video WHERE categorie = ?'); // Montre les vidéos en fonction de la catégorie chosit, récupération en GET
+                $req->execute(array($_GET['categorie']));
+                while($data=$req->fetch()){
+                    $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
-        <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-        <div class='video col-sm-4'>
-        <h4><?php echo $data['title']?></h4>    
-        <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        </a>
+                <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
+                    <div class='video m-1'>
+                        <h4><?php echo $data['title']?></h4>    
+                        <!-- Si un utilisateur clique sur le lien -> ajout de données en GET -->
+                        <a href='categorie.php?categorie=<?= $_GET['categorie'] ?>&video=<?= $data['id'] ?>' class='link-watchlater'><h6>Regarder plus tard</h6></a> 
+                        <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+                </a>
+
+                <?php 
+                }
+                $req->closeCursor();  
+                ?>                    
 
 
-<?php
-}
-$req->closeCursor(); 
-?>
+
+        <?php
+        // On récupére l'id de la vidéo grâce au GET et on change la valeur de NULL à 1
+        $idVideo = $_GET['video'];
+        $test = 'username_' . $_SESSION['id'];
+        $change =$bdd->query("UPDATE watchlater SET $test = 1 WHERE id_video = $idVideo") ?>
         </div>  
         </div>
+        <div class="right-side col-sm-3">
+            <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+                <div class="popcorn-solo"></div>
+                <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
+                <hr class="col-sm-6" />
+                <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+                <div class="popcorn-multiple-trois"></div>
+            </div>   
 
-        <div class="col-sm-2 p-5 align-center">
-        <a href="#">
-            <div class="col-sm-12 bg-danger block-series text-center m-auto">
-                <h6>Séries suivis</h6>
-            </div>
-        </a>
-        <a href="#">
-            <div class="col-sm-12 bg-danger block-series text-center">
-                <h6 class="align-middle">Séries à regarder plus tard</h6>
-            </div>
-        </a>
-        <a href="mesVideos.php">    
-            <div class="col-sm-12 bg-danger block-series text-center pt-auto pb-auto">
-                <h6>Mes vidéos</h6>
-            </div>
-        </a>    
+            <?php include ('../inc/footer.inc.php') ?>       
+
         </div>
     </div>
 </div>
-
-<?php include ('../inc/footer.inc.php') ?>
 

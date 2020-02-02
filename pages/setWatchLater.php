@@ -2,14 +2,11 @@
 
 <?php
 
-//On vérifie qu'il n'y a pas de balise dans les champs repmlis
-
 $passwordForm = htmlspecialchars($_POST['password']);
 $usernameForm = htmlspecialchars($_POST['username']);
-
-// On hash le mot de passe pour le faire matcher avec celui dans la BDD
 $passwordTest = md5($passwordForm);
 
+//echo $passwordForm . $usernameForm ;
 
 include('../inc/connection.inc.php');
 $req=$bdd->query("SELECT * FROM accounts WHERE username = '".$usernameForm."'");
@@ -18,17 +15,22 @@ $data = $req->fetch();
     $passwordBdd = $data['password'];
     $usernameBdd = $data['username'];
     $idBdd = $data['id'];
-    //echo $passwordBdd . '<br>';
+
+    $newUser = 'username_' . $idBdd;
 
  if($passwordBdd === $passwordTest){
-
-    //Si les infos sont bonnes, on démarre une session, on enregistre les infos dans cette variable pour pouvoir afficher toutes les fonctionnalités
         session_start();
 
         $_SESSION['username'] = $usernameBdd;
         $_SESSION['id'] = $idBdd;
+        
+
+        // On rajoute une colonne dans la table a regarder plus tards
+        $add = $bdd->query("ALTER TABLE watchlater ADD $newUser INT(11)");
 
         include('../inc/profilConnecte.inc.php');
+
+
 
         
     } else if ($passwordBdd !== $passwordTest) {
@@ -38,5 +40,3 @@ $data = $req->fetch();
 
 ?>
 
-
-<?php include('../inc/footer.inc.php') ?>

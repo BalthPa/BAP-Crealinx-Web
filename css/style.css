@@ -1,75 +1,181 @@
+* {
+    font-family: 'gilroy-light';
+}
+
+@font-face {
+    font-family: "gilroy-extrabold";
+    src: url("../fonts/GILROY-EXTRABOLD.otf") 
+}
+@font-face {
+    font-family: "gilroy-light";
+    src: url("../fonts/GILROY-LIGHT.otf") 
+}
 
 /* ALL */
 
 html {
+    margin: 0;
+    padding: 0;
     position: relative;
     min-height: 100%;
 }
 
-.col-sm-8{
-    height: 100px;
-}
-.col-sm-4{
-    height: 100px;
+body {
+    background-image: url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-/* NAV */
-ul{
-    width: 100%;
+.col-sm-12 a{
+    color: black ;
 }
-li{
-    margin: 0 5%;
+
+.col-sm-12 a:hover{
+    color: black ;
+    text-decoration: none;
+}
+
+
+
+/* NAV */
+
+.navbar {
+    background-color: #FFEC62;
+    height: 70px;
+}
+
+.navbar-brand {
+    padding: 0 20px;
+}
+
+.nav-item {
+    padding: 0 30px;
 }
 
 .logo {
-    font-size: 20px;
+    background-image: url(../img/logo-bg-white.png);
+    background-size: cover;
+    width: 60px;
+    height: 57px;
 }
 
-/* RIGHT DIV */
-
-.actu {
-    margin-top: 10vh;
-    background-color: #ECECEC;;
+.form-inline {
+    padding: 0 15vw;
 }
 
-.right-side {
-    margin-top: 10vh;
+.up {
+    height: 30px;
 }
 
-.div-series {
-    margin-bottom: 80%;
-}
-.block-series {
-    height: 15vh;
-    width: 100px;
-    margin: 10vh auto;
-    background-color: #ECECEC;
-    color: #323232;
+.dropdown-menu {
+    background-color: #5d62d1;
 }
 
-/* FOOTER */
-
-.footer {
-    background-color: #9B9B9B; 
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer {
-    background-image: url('../img/2252.jpg');
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
+.dropdown-item {
+    font-family: 'gilroy-extrabold';
+    text-transform: uppercase;
+    font-size: 14px;
     color: white;
-    text-align: center;
+}
+
+.category-logo {
+    background-image: url(../img/nine-dots.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.add-video-logo {
+    width: 42px;
+    height: 27px;
+    margin: 0 auto;
+    background-image: url(../img/camera-plus.png);
+    background-size: contain;
+}
+
+.profile-pic-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-image: url(../img/pp.png);
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+/* INDEX.PHP */
+
+
+h3 {
+    font-family: 'gilroy-extrabold';
+    text-transform: uppercase;
+}
+
+.blog {                                 /* Dashboard actualités */
+    max-height: 120vh;
+    overflow: auto;
+    background-color: #ECECE9;
+    border-radius: 5%;
+}
+
+.post {
+    background-color: white;
+}
+
+.submit-post {
+    text-transform: uppercase;
+    font-family: 'gilroy-extrabold';
+    color: white;
+    background-color: #5E5CBA;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
   }
+  
+::-webkit-scrollbar-track {
+    background: #c6c6c6; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 155, 155); 
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(128, 128, 128); 
+}
+
+
+
+/* CATEGORIE */
+
+.category-vd {
+    background-color: #ECECE9;
+    border-radius: 5%;
+}
+
+/* MES VIDEOS / SERIES SUIVIS */
+.maVideo, .videoSuivie{
+    background-color: #ffffff;
+    border-radius: 3%;
+    margin: 2% 0;
+}
+
+
+
+/* PROFIL */
+
+.post_profil{
+    overflow: scroll;
+    height: 30vh !important ;
+}
+
 
 /* PAGE PROFIL */
 
@@ -78,7 +184,7 @@ li{
     width: 10%;
 }
 
-.bio  {
+.bio {
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -88,12 +194,146 @@ li{
 }
 
 
-.block-series{
-    height: 100px;
-    margin: 10% 0;
+/* AJOUTVIDEO.PHP */
+
+.add-vd {
+    background-color: #ECECE9;
+    border-radius: 5%;  
 }
 
-a, a:hover{
-    text-decoration:none;
-    color: black;
+.submit-vd {
+    width: 200px;
+    text-transform: uppercase;
+    font-family: 'gilroy-extrabold';
+    background-color: #FFEC62;
 }
+
+.submit-vd:hover {
+    background-color: rgb(165, 146, 0);
+    color: white;
+}
+
+/* CONTACT */
+
+
+.contact {
+    background-color: rgba(255, 255, 255, 0.122);
+    border-radius: 5%;
+}
+
+.submit {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: 'gilroy-extrabold';
+    background-color: #5E5CBA;
+}
+
+legend {
+    font-size: 18px;
+}
+
+ /* Messages de résultat d'envoi de données (contact.php) */
+
+ .message-error {                               
+    background-color: rgb(255, 200, 200);
+}
+.message-success {
+    background-color: rgb(123, 255, 149);
+}
+
+
+
+
+/* Boutons de droite */
+
+.right-side {                  
+    margin: 10vh 0 4vh 0;
+}
+
+.div-series {
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 8%;  
+}
+
+.block-series{
+    height: 150px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'gilroy-extrabold';
+    border-radius: 8%;
+}
+
+.block-series:hover {
+    color: rgb(88, 88, 88);
+}
+
+hr {
+    background-color: #FFEC62;
+    border-width: 3px;
+    margin: 2px auto;
+}
+
+/* .popcorn-solo {                                    LES POP-CORNS PAS ENCORE INTEGRES
+    background-image: url('../img/popcorn-solo.png');
+    background-size: cover;
+    width: 50px;
+    height: 46px;
+}
+
+.popcorn-multiple-trois {
+    background-image: url('../img/popcorn-multiple-trois.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+} */
+
+
+/* FOOTER */
+
+
+.footer {
+    background-color: #ECECEC; 
+    margin-top: 5vh;
+    padding: 10px;
+}
+
+.footer-links {
+    list-style-type: circle;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.post_profil{
+    overflow:scroll;
+}
+
+
+
+
+.facebook {
+    background-image: url("../img/facebook.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid black; */
+}
+.twitter {
+    background-image: url("../img/twitter.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid black; */
+}
+.instagram {
+    background-image: url("../img/instagram.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid black; */
+}
+

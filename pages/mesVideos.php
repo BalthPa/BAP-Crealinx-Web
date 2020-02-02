@@ -1,26 +1,30 @@
 <?php include ('../inc/header.inc.php') ?>
 
-<div class='container-fluid'>
-    <div class="row">
-        <div class="col-sm-10 bg-primary text-center pl-5 pr-5">
+<div class='container-fluid mb-5'>
+    <div class="d-flex justify-content-around">
+        <div class="blog col-sm-7 text-center mt-5 pl-5 pr-5 shadow">
         <h1 class="text-center">Mes vidéos</h1>
-            <div class="row">
+            <div class="col-sm-12 d-flex flex-wrap">
             <?php 
 
 
             include ('../inc/connection.inc.php');
-
-            $req = $bdd->query("SELECT * FROM video WHERE id_creator = '".$_SESSION['id']."'");
+            // On récupère l'id de l'utilisateur pour afficher seulement ses vidéos
+            $idCreator = $_SESSION['id'];
+            $req = $bdd->query("SELECT * FROM video WHERE id_creator = $idCreator ORDER BY id DESC");
 
             while($data=$req->fetch()){
-                $yt_id = substr($data['url'], -11);
+                $yt_id = substr($data['url'], -11); // On sélectionne juste l'id de la vidéo, on coupe l'URl
             ?>
-        <a href="lecteur.php?creator=<?php echo $data['id'] ?>">
-        <div class='video col-sm-4'>
-        <h4><?php echo $data['title']?></h4>    
-        <iframe src="https://www.youtube.com/embed/<?php echo $yt_id?>" frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <a href="lecteur.php?creator=<?= $data['id'] ?>" class='col-sm-12 maVideo'>
+            <div class='video m-3 d-flex justify-space-around'>    
+                <iframe src="https://www.youtube.com/embed/<?= $yt_id?>" frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class='d-block'>
+                <h4><?= $data['title']?></h4><br>
+                <p class='text-left ml-4'><?= $data['synopsis'] ?></p>
+                </div>    
+            </div>
         </a>
 
 
@@ -30,21 +34,19 @@ $req->closeCursor();
 ?>
         </div>  
         </div>
+        
+        <div class="right-side col-sm-3">
 
-        <div class="col-sm-2 p-5">
-        <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h4>Séries suivis</h4>
-            </div>
-        </a>
-        <a href="#">
-            <div class="col-sm-12 bg-danger test text-center">
-                <h4>Séries à regarder plus tard</h4>
-            </div>
-        </a>   
+            <div class="div-series col-sm-12 btn-group-vertical shadow p-0" role="group" aria-label="Basic example">
+                <a href='watchLater.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Séries suivies </button></a>
+                <hr class="col-sm-6" />
+                <a href='mesVideos.php' class='block-links col-sm-12 p-0'><button type="button" class="block-series btn btn-secondary col-sm-12 bg-white p-0 border-0"> Mes vidéos </button></a>
+            </div>   
+
+            <?php include ('../inc/footer.inc.php') ?>       
+
         </div>
+        
     </div>
 </div>
-
-<?php include ('../inc/footer.inc.php') ?>
 
