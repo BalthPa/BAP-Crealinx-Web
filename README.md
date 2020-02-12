@@ -20,7 +20,7 @@ Pour mettre en place la BDD:
 
 # Equipe
 
-Julien Lega - Chef de projet (Spécialité : Communication digitale et e-business - Année 3)
+Julien Lega - Chef de projet (Spécialité : Communication digitale et e-business - Année 3)<br>
 Virgil Leclerc - Chef de projet (Spécialité : Communication digitale et e-business - Année 3)
 Emilien Proust - Chef de projet (Spécialité : Création et design - Année 3)
 Alexandre Luneau - Chef de projet (Spécialité : Developpement Web - Année 3)
